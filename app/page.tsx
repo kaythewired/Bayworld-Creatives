@@ -1,89 +1,111 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
-import { projects, services } from "./_components/site-data";
+import { services } from "./_components/site-data";
+
+const studioPhotos = [
+  { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85", alt: "Creative team sharing ideas around a table" },
+  { src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85", alt: "Colleagues planning a project" },
+  { src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85", alt: "Creative professionals collaborating in a studio" },
+  { src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85", alt: "Designer presenting work to a client" },
+  { src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85", alt: "Team reviewing a creative project" },
+];
+
+const featureCards = [
+  { title: "Build a standout brand", text: "Clear identity systems, memorable graphic design and campaign assets that help your business look established.", image: studioPhotos[3] },
+  { title: "Make every print count", text: "Practical, high-quality production for the materials your audience can see, hold and keep.", image: studioPhotos[1] },
+];
 
 export default function Home() {
   return (
     <>
       <SiteHeader />
       <main id="top">
-        <section className="hero">
-          <div className="site-shell hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow"><span /> Lagos-based creative agency</p>
-              <h1>Crafting dreams.<br /><em>Amplifying brands.</em></h1>
-              <p className="hero-intro">We bring together creative branding, professional design, quality printing and practical digital solutions so businesses can stand out with confidence.</p>
-              <div className="hero-actions">
-                <a className="button button-primary" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
-                <a className="text-link" href="/work">View Our Work <span aria-hidden="true">&rarr;</span></a>
-              </div>
-            </div>
-            <div className="hero-art" aria-label="Bayworld Creatives logo and creative composition">
-              <div className="hero-art-topline"><span>EST. LAGOS</span><span>BC / 01</span></div>
-              <div className="hero-circle hero-circle-one" />
-              <div className="hero-circle hero-circle-two" />
-              <div className="hero-paper hero-paper-back" />
-              <div className="hero-paper hero-paper-front"><p>Ideas, made visible.</p><img src="/bayworld-logo.png" alt="" /></div>
-              <p className="hero-art-caption">Branding<br />Print<br />Digital</p>
+        <section className="reference-hero">
+          <div className="reference-hero-grid" aria-hidden="true" />
+          <div className="site-shell reference-hero-inner">
+            <p className="reference-kicker">Lagos creative studio <span>BC / 01</span></p>
+            <div className="reference-hero-copy">
+              <span className="green-orb orb-left" aria-hidden="true" />
+              <span className="green-orb orb-right" aria-hidden="true" />
+              <h1>Creative work<br />that helps brands <em>stand out.</em></h1>
+              <p>Bayworld Creatives brings together branding, professional design, quality printing and effective digital support for businesses ready to grow with confidence.</p>
+              <a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
-          <div className="hero-scroll">Explore Bayworld <span aria-hidden="true">&darr;</span></div>
-        </section>
-
-        <section className="about section">
-          <div className="site-shell about-grid">
-            <div><p className="eyebrow"><span /> About Bayworld</p><p className="section-number">01 / WHO WE ARE</p></div>
-            <div className="about-copy">
-              <h2>Thoughtful creativity for businesses ready to be remembered.</h2>
-              <p>Bayworld Creatives is a Lagos-based creative agency delivering branding, printing, web development and digital marketing solutions.</p>
-              <p>We combine creativity, strategy and technical expertise to help businesses build strong identities, connect with their audiences and achieve meaningful growth.</p>
-              <a className="text-link" href="/about">Meet Bayworld <span aria-hidden="true">&rarr;</span></a>
-            </div>
+          <div className="site-shell reference-image-strip">
+            {studioPhotos.map((photo, index) => <figure className={`hero-photo hero-photo-${index + 1}`} key={photo.src}><img src={photo.src} alt={photo.alt} /></figure>)}
           </div>
         </section>
 
-        <section className="services section">
+        <section className="reference-intro section">
+          <div className="site-shell reference-intro-grid">
+            <div className="reference-intro-copy">
+              <p className="reference-eyebrow">What we make</p>
+              <h2>Make your business<br />look as good as<br /><em>it really is.</em></h2>
+              <p>From first ideas through to final production, we create brand experiences that feel thoughtful, professional and ready for the real world.</p>
+              <a className="reference-text-link" href="/about">More about Bayworld <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div className="reference-feature-grid">
+              {featureCards.map((card) => <article className="reference-feature-card" key={card.title}>
+                <img src={card.image.src} alt={card.image.alt} />
+                <div><h3>{card.title}</h3><p>{card.text}</p><a href="/services" aria-label={`Explore ${card.title}`}>Explore <span aria-hidden="true">&rarr;</span></a></div>
+              </article>)}
+            </div>
+          </div>
+        </section>
+
+        <section className="reference-launch section">
           <div className="site-shell">
-            <div className="section-heading">
-              <div><p className="eyebrow eyebrow-light"><span /> What we do</p><h2>One creative partner.<br /><em>Many ways to grow.</em></h2></div>
-              <p>From first impression to final delivery, our services work together to make your brand feel clear, capable and consistent.</p>
-            </div>
-            <div className="services-list">
-              {services.map((service) => (
-                <a className="service-card" href="/services" key={service.number}>
-                  <span className="service-number">{service.number}</span>
-                  <div><h3>{service.title}</h3><p>{service.description}</p></div>
-                  <span className="service-arrow" aria-hidden="true">&rarr;</span>
-                </a>
-              ))}
+            <div className="reference-section-title"><span className="green-orb" aria-hidden="true" /><h2>Everything you need<br />to launch your <em>next move.</em></h2></div>
+            <div className="reference-service-grid">
+              {services.map((service, index) => <a href="/services" className={`reference-service-card service-tone-${index + 1}`} key={service.number}>
+                <div className="service-card-image"><img src={studioPhotos[index % studioPhotos.length].src} alt="" /></div>
+                <div><p>{service.number}</p><h3>{service.title}</h3><span aria-hidden="true">&rarr;</span></div>
+              </a>)}
             </div>
           </div>
         </section>
 
-        <section className="work section">
+        <section className="reference-belief section">
+          <div className="site-shell reference-belief-grid">
+            <div className="reference-belief-copy">
+              <p className="reference-eyebrow">How we work</p>
+              <h2>We listen closely, create with purpose and make sure your brand feels right <em>where it matters.</em></h2>
+              <p>Our work is shaped around your goals, your audience and the everyday places people meet your business — online, in print and in person.</p>
+              <a className="reference-text-link" href="/about">Our process <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div className="reference-belief-visual"><span className="visual-frame" aria-hidden="true" /><img src={studioPhotos[2].src} alt="Creative team working together" /></div>
+          </div>
+          <div className="site-shell reference-stats">
+            <div><strong>01</strong><span>creative partner for your brand</span></div>
+            <div><strong>06</strong><span>connected service areas</span></div>
+            <div><strong>360°</strong><span>support from idea to delivery</span></div>
+          </div>
+        </section>
+
+        <section className="reference-dark-services section">
           <div className="site-shell">
-            <div className="work-heading">
-              <div><p className="eyebrow eyebrow-light"><span /> Selected work</p><h2>Creative work that<br /><em>makes an impact.</em></h2></div>
-              <p>Explore the ways we help businesses communicate better, show up professionally and stand out in the right places.</p>
+            <div className="reference-section-title light"><span className="green-orb" aria-hidden="true" /><h2>Practical creative<br />support for your <em>business.</em></h2></div>
+            <div className="reference-dark-grid">
+              {services.slice(0, 3).map((service, index) => <article className={`reference-dark-card dark-card-${index + 1}`} key={service.number}>
+                <div><p>{service.number} / BAYWORLD SERVICE</p><h3>{service.title}</h3><p>{service.description}</p><a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a></div>
+                <img src={studioPhotos[(index + 1) % studioPhotos.length].src} alt="" />
+              </article>)}
             </div>
-            <div className="project-grid">
-              {projects.map((project, index) => (
-                <a className={`project-card ${project.className}`} href="/work" key={project.type}>
-                  <div className="project-visual" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span><i /><b>{project.type.split(" ")[0]}</b></div>
-                  <div className="project-details"><div><p>{project.label}</p><h3>{project.type}</h3></div><span aria-hidden="true">&rarr;</span></div>
-                </a>
-              ))}
-            </div>
-            <a className="button button-cream" href="/work">View Our Portfolio <span aria-hidden="true">&rarr;</span></a>
           </div>
         </section>
 
-        <section className="cta">
-          <div className="site-shell cta-inner">
-            <p className="eyebrow"><span /> Let&apos;s make it happen</p>
-            <h2>Ready to amplify<br /><em>your brand?</em></h2>
-            <p>Whether you need a new identity, professional printing, a modern website or ongoing digital support, Bayworld Creatives is ready to bring your vision to life.</p>
-            <a className="button button-primary" href="/contact">Start Your Project <span aria-hidden="true">&rarr;</span></a>
+        <section className="reference-work section">
+          <div className="site-shell reference-work-grid">
+            <div><p className="reference-eyebrow">Creative work that delivers</p><h2>A stronger presence<br />starts with a clear <em>direction.</em></h2><p>Explore the branding, print and digital work we shape for businesses that are ready to be seen.</p><a className="reference-text-link" href="/work">View Our Work <span aria-hidden="true">&rarr;</span></a></div>
+            <div className="reference-work-stack"><figure><img src={studioPhotos[0].src} alt="Creative collaborators" /></figure><figure><img src={studioPhotos[4].src} alt="Team discussing an idea" /></figure></div>
+          </div>
+        </section>
+
+        <section className="reference-cta">
+          <div className="site-shell reference-cta-inner">
+            <div><p className="reference-eyebrow">Start a project</p><h2>Share your idea.<br /><em>Let&apos;s build it.</em></h2><p>Tell us what you are working toward and we will help you turn it into a brand experience that works.</p></div>
+            <div className="reference-contact-panel"><p>Branding, printing, websites or ongoing support — it starts with a conversation.</p><a className="reference-button reference-button-dark" href="/contact">Start Your Project <span aria-hidden="true">&rarr;</span></a></div>
           </div>
         </section>
       </main>
