@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   icons: {
-    icon: [{ url: "/bayworld-favicon.png", type: "image/png" }],
-    shortcut: "/bayworld-favicon.png",
-    apple: "/bayworld-favicon.png",
+    icon: [{ url: "/bayworld-favicon-bay.png?v=2", type: "image/png", sizes: "512x512" }],
+    shortcut: "/favicon.ico?v=2",
+    apple: "/bayworld-favicon-bay.png?v=2",
   },
 };
 
