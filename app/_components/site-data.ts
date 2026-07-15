@@ -7,6 +7,15 @@ export const services = [
   { number: "06", title: "Creative & Business Support", description: "Flexible content, sourcing and brand-support solutions shaped around what your business needs next.", detail: "When the brief reaches beyond a single deliverable, we bring practical creative support together in one dependable partnership." },
 ];
 
+export const creativeImages = [
+  { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85", alt: "Creative team sharing ideas around a table" },
+  { src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85", alt: "Colleagues planning a project" },
+  { src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85", alt: "Creative professionals collaborating in a studio" },
+  { src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85", alt: "Designer presenting work to a client" },
+  { src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85", alt: "Team reviewing a creative project" },
+  { src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85", alt: "Professional using a laptop in a creative workspace" },
+];
+
 export const values = [
   "Creative solutions tailored to your goals",
   "Professional, consistent delivery",
@@ -23,7 +32,7 @@ export const process = [
 ];
 
 export const projects = [
-  { type: "Brand Identity", label: "Identity / Strategy", className: "project-identity", description: "A distinct visual system that gives a business a stronger starting point." },
-  { type: "Print & Production", label: "Print / Production", className: "project-print", description: "Printed brand materials designed to work beautifully in the real world." },
-  { type: "Digital Experience", label: "Web / Digital", className: "project-digital", description: "A clear, responsive digital presence built around the next customer action." },
+  { type: "Brand Identity", label: "Identity / Strategy", className: "project-identity", description: "A distinct visual system that gives a business a stronger starting point.", image: creativeImages[3] },
+  { type: "Print & Production", label: "Print / Production", className: "project-print", description: "Printed brand materials designed to work beautifully in the real world.", image: creativeImages[1] },
+  { type: "Digital Experience", label: "Web / Digital", className: "project-digital", description: "A clear, responsive digital presence built around the next customer action.", image: creativeImages[5] },
 ];

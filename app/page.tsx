@@ -1,18 +1,10 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
-import { services } from "./_components/site-data";
-
-const studioPhotos = [
-  { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85", alt: "Creative team sharing ideas around a table" },
-  { src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85", alt: "Colleagues planning a project" },
-  { src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85", alt: "Creative professionals collaborating in a studio" },
-  { src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85", alt: "Designer presenting work to a client" },
-  { src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85", alt: "Team reviewing a creative project" },
-];
+import { creativeImages, services } from "./_components/site-data";
 
 const featureCards = [
-  { title: "Build a standout brand", text: "Clear identity systems, memorable graphic design and campaign assets that help your business look established.", image: studioPhotos[3] },
-  { title: "Make every print count", text: "Practical, high-quality production for the materials your audience can see, hold and keep.", image: studioPhotos[1] },
+  { title: "Build a standout brand", text: "Clear identity systems, memorable graphic design and campaign assets that help your business look established.", image: creativeImages[3] },
+  { title: "Make every print count", text: "Practical, high-quality production for the materials your audience can see, hold and keep.", image: creativeImages[1] },
 ];
 
 export default function Home() {
@@ -33,7 +25,7 @@ export default function Home() {
             </div>
           </div>
           <div className="site-shell reference-image-strip">
-            {studioPhotos.map((photo, index) => <figure className={`hero-photo hero-photo-${index + 1}`} key={photo.src}><img src={photo.src} alt={photo.alt} /></figure>)}
+            {creativeImages.slice(0, 5).map((photo, index) => <figure className={`hero-photo hero-photo-${index + 1}`} key={photo.src}><img src={photo.src} alt={photo.alt} /></figure>)}
           </div>
         </section>
 
@@ -59,7 +51,7 @@ export default function Home() {
             <div className="reference-section-title"><span className="green-orb" aria-hidden="true" /><h2>Everything you need<br />to launch your <em>next move.</em></h2></div>
             <div className="reference-service-grid">
               {services.map((service, index) => <a href="/services" className={`reference-service-card service-tone-${index + 1}`} key={service.number}>
-                <div className="service-card-image"><img src={studioPhotos[index % studioPhotos.length].src} alt="" /></div>
+                <div className="service-card-image"><img src={creativeImages[index % creativeImages.length].src} alt="" /></div>
                 <div><p>{service.number}</p><h3>{service.title}</h3><span aria-hidden="true">&rarr;</span></div>
               </a>)}
             </div>
@@ -74,7 +66,7 @@ export default function Home() {
               <p>Our work is shaped around your goals, your audience and the everyday places people meet your business — online, in print and in person.</p>
               <a className="reference-text-link" href="/about">Our process <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <div className="reference-belief-visual"><span className="visual-frame" aria-hidden="true" /><img src={studioPhotos[2].src} alt="Creative team working together" /></div>
+            <div className="reference-belief-visual"><span className="visual-frame" aria-hidden="true" /><img src={creativeImages[2].src} alt="Creative team working together" /></div>
           </div>
           <div className="site-shell reference-stats">
             <div><strong>01</strong><span>creative partner for your brand</span></div>
@@ -89,7 +81,7 @@ export default function Home() {
             <div className="reference-dark-grid">
               {services.slice(0, 3).map((service, index) => <article className={`reference-dark-card dark-card-${index + 1}`} key={service.number}>
                 <div><p>{service.number} / BAYWORLD SERVICE</p><h3>{service.title}</h3><p>{service.description}</p><a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a></div>
-                <img src={studioPhotos[(index + 1) % studioPhotos.length].src} alt="" />
+                <img src={creativeImages[(index + 1) % creativeImages.length].src} alt="" />
               </article>)}
             </div>
           </div>
@@ -98,7 +90,7 @@ export default function Home() {
         <section className="reference-work section">
           <div className="site-shell reference-work-grid">
             <div><p className="reference-eyebrow">Creative work that delivers</p><h2>A stronger presence<br />starts with a clear <em>direction.</em></h2><p>Explore the branding, print and digital work we shape for businesses that are ready to be seen.</p><a className="reference-text-link" href="/work">View Our Work <span aria-hidden="true">&rarr;</span></a></div>
-            <div className="reference-work-stack"><figure><img src={studioPhotos[0].src} alt="Creative collaborators" /></figure><figure><img src={studioPhotos[4].src} alt="Team discussing an idea" /></figure></div>
+            <div className="reference-work-stack"><figure><img src={creativeImages[0].src} alt="Creative collaborators" /></figure><figure><img src={creativeImages[4].src} alt="Team discussing an idea" /></figure></div>
           </div>
         </section>
 
