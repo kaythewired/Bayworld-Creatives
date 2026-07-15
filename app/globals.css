@@ -546,3 +546,47 @@ body { overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .playful-interactions, .playful-ribbon, .hero-sticker, .reference-hero::after, .hero-photo, .green-orb, .reference-dark-services::before, .page-hero::after, .page-hero-sticker, .page-hero-spark, .reference-stats strong { display: none !important; }
 }
+
+/* Day / night switch and animated brand marks */
+html, body, .about, .work, .process, .contact-section, .reference-intro, .reference-launch, .reference-belief, .reference-work, .image-story-section, .image-process, .image-callout-section, .image-work-page, .image-work-collage, .image-contact-section, .page-hero-sand, .reference-feature-card, .reference-service-card, .image-process-card, .image-contact-details { transition: background-color .42s ease, color .42s ease, border-color .42s ease, box-shadow .42s ease; }
+.theme-toggle { position: relative; display: inline-flex; width: 48px; height: 25px; flex: 0 0 auto; align-items: center; justify-content: space-between; padding: 3px 5px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.08); color: var(--forest-soft); cursor: pointer; transition: background .28s ease, border-color .28s ease, color .28s ease, transform .28s ease; }
+.theme-toggle:hover { border-color: var(--forest-soft); background: rgba(207,226,207,.18); transform: translateY(-2px) rotate(-3deg); }
+.theme-toggle span:not(.theme-toggle-thumb) { position: relative; z-index: 1; width: 13px; font-size: 12px; line-height: 1; text-align: center; }
+.theme-toggle-sun { color: #f2e9a5; }.theme-toggle-moon { color: #eaf2e9; }
+.theme-toggle-thumb { position: absolute; top: 3px; left: 3px; width: 17px; height: 17px; border-radius: 50%; background: var(--forest-soft); box-shadow: 0 2px 7px rgba(0,0,0,.32); transition: transform .36s cubic-bezier(.2,.8,.2,1), background .28s ease; }
+html[data-theme="night"] .theme-toggle-thumb { background: var(--forest-bright); transform: translateX(22px); }
+.brand-logo { transform-origin: 18% center; animation: logo-float 5.4s ease-in-out infinite; }
+.brand-link:hover .brand-logo { animation-play-state: paused; transform: rotate(-2deg) scale(1.06); }
+.footer-logo { transform-origin: left center; animation: footer-logo-drift 6.7s ease-in-out infinite; }
+.footer-brand:hover .footer-logo { animation-play-state: paused; transform: rotate(-2deg) scale(1.045); }
+.site-header { transition: filter .42s ease, border-color .42s ease, box-shadow .42s ease; }
+.site-header.is-scrolled { border-bottom-color: rgba(255,255,255,.7); box-shadow: 0 12px 28px rgba(0,0,0,.18); filter: invert(1); }
+.site-header.is-scrolled .brand-logo { filter: none; }
+
+html[data-theme="night"] { --paper: #0e130f; --mist: #171f19; --ink: #edf4ed; --line: rgba(237,244,237,.18); }
+html[data-theme="night"] body { background: var(--paper); color: var(--ink); }
+html[data-theme="night"] .about, html[data-theme="night"] .reference-launch, html[data-theme="night"] .contact-section, html[data-theme="night"] .image-work-collage { background: #101711; color: var(--ink); }
+html[data-theme="night"] .work, html[data-theme="night"] .process, html[data-theme="night"] .page-hero-sand, html[data-theme="night"] .reference-intro, html[data-theme="night"] .reference-belief, html[data-theme="night"] .reference-work, html[data-theme="night"] .image-story-section, html[data-theme="night"] .image-process, html[data-theme="night"] .image-callout-section, html[data-theme="night"] .image-work-page, html[data-theme="night"] .image-contact-section, html[data-theme="night"] .reference-contact-panel { background: #18221b; color: var(--ink); }
+html[data-theme="night"] .reference-feature-card, html[data-theme="night"] .reference-service-card, html[data-theme="night"] .image-process-card { border-color: rgba(237,244,237,.12); background: #202b22; box-shadow: 0 9px 23px rgba(0,0,0,.23); }
+html[data-theme="night"] .reference-feature-card:hover, html[data-theme="night"] .reference-service-card:hover, html[data-theme="night"] .image-process-card:hover { background: #263329; }
+html[data-theme="night"] .image-contact-details { background: #233527; }
+html[data-theme="night"] .work-heading h2, html[data-theme="night"] .process-heading h2, html[data-theme="night"] .reference-intro h2, html[data-theme="night"] .reference-belief h2, html[data-theme="night"] .reference-work h2, html[data-theme="night"] .reference-cta h2, html[data-theme="night"] .reference-section-title h2, html[data-theme="night"] .reference-feature-card h3, html[data-theme="night"] .reference-service-card h3, html[data-theme="night"] .image-callout-grid h2, html[data-theme="night"] .image-work-collage h2, html[data-theme="night"] .image-project-visual + div h2, html[data-theme="night"] .project-details h3, html[data-theme="night"] .process-card h3 { color: var(--ink); }
+html[data-theme="night"] .about-copy > p, html[data-theme="night"] .story-copy p, html[data-theme="night"] .service-callout > p, html[data-theme="night"] .portfolio-note > p, html[data-theme="night"] .contact-intro > p, html[data-theme="night"] .work-heading > p, html[data-theme="night"] .process-heading > p, html[data-theme="night"] .process-card > p:last-child, html[data-theme="night"] .work-item > div:last-child > p:last-child, html[data-theme="night"] .reference-intro > p, html[data-theme="night"] .reference-feature-card p, html[data-theme="night"] .reference-service-card p, html[data-theme="night"] .image-story-copy p, html[data-theme="night"] .image-callout-grid > div > p:not(.reference-eyebrow), html[data-theme="night"] .image-work-collage p:not(.reference-eyebrow), html[data-theme="night"] .reference-contact-panel p { color: rgba(237,244,237,.72) !important; }
+html[data-theme="night"] .page-hero-sand .page-index { color: rgba(237,244,237,.52); }
+html[data-theme="night"] .page-hero-sand .page-lead { color: rgba(237,244,237,.72); }
+html[data-theme="night"] .page-hero-sand .page-art-sheet { background: #edf4ed; }
+html[data-theme="night"] .story-media-stack figure:last-child { border-color: #18221b; }
+html[data-theme="night"] .image-callout-stack figure:last-child { border-color: #18221b; }
+html[data-theme="night"] .image-contact-details .contact-detail-grid > div { border-color: rgba(207,226,207,.25); }
+html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:not(.footer-label), html[data-theme="night"] .image-contact-details .contact-detail-grid a { color: var(--forest-soft); }
+
+@keyframes logo-float { 0%, 100% { transform: translateY(0) rotate(0); filter: drop-shadow(0 0 0 rgba(207,226,207,0)); } 50% { transform: translateY(-3px) rotate(.7deg); filter: drop-shadow(0 6px 8px rgba(207,226,207,.17)); } }
+@keyframes footer-logo-drift { 0%, 100% { transform: translateX(0) rotate(0); } 50% { transform: translateX(5px) rotate(-.7deg); } }
+
+@media (max-width: 620px) {
+  .header-inner { gap: 10px; }.theme-toggle { width: 43px; height: 24px; }.theme-toggle-thumb { width: 16px; height: 16px; } html[data-theme="night"] .theme-toggle-thumb { transform: translateX(19px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo, .footer-logo { animation: none !important; }
+}
