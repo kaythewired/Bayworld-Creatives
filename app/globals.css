@@ -35,9 +35,9 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .header-inner { display: flex; align-items: center; height: 104px; gap: 30px; }
 .brand-link { display: block; flex: 0 0 auto; padding: 0; background: transparent; }
 .brand-logo { width: 304px; height: 84px; object-fit: contain; object-position: center; filter: drop-shadow(0 2px 1px rgba(0,0,0,.32)); }
-.brand-logo-night, .footer-logo-night { display: none; }
-html[data-theme="night"] .brand-logo-day, html[data-theme="night"] .footer-logo-day { display: none; }
-html[data-theme="night"] .brand-logo-night, html[data-theme="night"] .footer-logo-night { display: block; }
+.brand-logo-green { display: none; }
+.site-header.is-scrolled .brand-logo-white { display: none; }
+.site-header.is-scrolled .brand-logo-green { display: block; }
 .nav-links { display: flex; gap: 33px; margin-left: auto; }
 .nav-links a { color: rgba(255, 255, 255, 0.76); font-size: 12px; font-weight: 700; transition: color 180ms ease; }
 .nav-links a:hover { color: var(--forest-soft); }
@@ -573,8 +573,11 @@ html[data-theme="night"] .theme-toggle-thumb { background: var(--forest-bright);
 .footer-logo { transform-origin: left center; animation: footer-logo-drift 6.7s ease-in-out infinite; }
 .footer-brand:hover .footer-logo { animation-play-state: paused; transform: rotate(-2deg) scale(1.045); }
 .site-header { transition: filter .42s ease, border-color .42s ease, box-shadow .42s ease; }
-.site-header.is-scrolled { border-bottom-color: rgba(255,255,255,.7); box-shadow: 0 12px 28px rgba(0,0,0,.18); filter: invert(1); }
-.site-header.is-scrolled .brand-logo { filter: none; }
+.site-header.is-scrolled { border-bottom-color: rgba(17,18,17,.28); background: var(--paper); box-shadow: 0 12px 28px rgba(0,0,0,.18); }
+.site-header.is-scrolled .nav-links a { color: rgba(17,18,17,.72); }
+.site-header.is-scrolled .nav-links a:hover { color: var(--forest); }
+.site-header.is-scrolled .theme-toggle { border-color: rgba(17,18,17,.28); background: rgba(8,77,24,.08); color: var(--forest); }
+.site-header.is-scrolled .header-cta { color: var(--forest); }
 
 html[data-theme="night"] { --paper: #0e130f; --mist: #171f19; --ink: #edf4ed; --line: rgba(237,244,237,.18); }
 html[data-theme="night"] body { background: var(--paper); color: var(--ink); }

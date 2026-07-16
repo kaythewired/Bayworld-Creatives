@@ -29,8 +29,8 @@ export function SiteHeader() {
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <div className="site-shell header-inner">
         <a className="brand-link" href="/" aria-label="Bayworld Creatives home">
-          <img className="brand-logo brand-logo-day" src="/bayworld-logo-day.png" alt="Bayworld Creatives" />
-          <img className="brand-logo brand-logo-night" src="/bayworld-logo-night.png" alt="Bayworld Creatives" />
+          <img className="brand-logo brand-logo-white" src="/bayworld-logo-night.png" alt="Bayworld Creatives" />
+          <img className="brand-logo brand-logo-green" src="/bayworld-logo-day.png" alt="Bayworld Creatives" />
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="/about">About</a><a href="/services">Services</a><a href="/work">Work</a><a href="/contact">Contact</a>
