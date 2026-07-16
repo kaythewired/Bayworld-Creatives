@@ -1,6 +1,7 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
 import { DispersingHeadline } from "./_components/DispersingHeadline";
+import { MockupCarousel } from "./_components/MockupCarousel";
 import { creativeImages, services } from "./_components/site-data";
 
 const featureCards = [
@@ -27,9 +28,7 @@ export default function Home() {
               <a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
-          <div className="site-shell reference-image-strip">
-            {creativeImages.slice(0, 5).map((photo, index) => <figure className={`hero-photo hero-photo-${index + 1}`} key={photo.src}><img src={photo.src} alt={photo.alt} /></figure>)}
-          </div>
+          <MockupCarousel images={creativeImages} />
         </section>
 
         <section className="reference-intro section">

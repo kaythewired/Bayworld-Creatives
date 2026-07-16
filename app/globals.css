@@ -632,3 +632,28 @@ html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:n
 @media (prefers-reduced-motion: reduce) {
   .headline-scatter-active .dispersing-letter { animation: none; }
 }
+
+/* Home-page mockup carousel */
+.mockup-carousel { position: relative; z-index: 2; }
+.mockup-carousel-stage { position: relative; height: clamp(300px, 34vw, 500px); overflow: hidden; border: 1px solid rgba(255,255,255,.16); background: #1b201c; }
+.mockup-carousel-slide { position: absolute; inset: 0; margin: 0; opacity: 0; pointer-events: none; transform: scale(1.08) rotate(-1.2deg); transition: opacity .72s ease, transform 1.2s cubic-bezier(.2,.75,.2,1); }
+.mockup-carousel-slide::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.22), transparent 45%, rgba(0,0,0,.14)); content: ""; }
+.mockup-carousel-slide.is-active { z-index: 1; opacity: 1; transform: scale(1) rotate(0); }
+.mockup-carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+.mockup-carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 0 0; color: rgba(255,255,255,.67); }
+.mockup-carousel-controls p { display: flex; gap: 10px; margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.mockup-carousel-controls p b { color: var(--forest-soft); font-weight: 800; }
+.mockup-carousel-actions { display: flex; align-items: center; gap: 10px; }
+.mockup-carousel-actions > button { display: grid; width: 33px; height: 30px; place-items: center; border: 1px solid rgba(255,255,255,.24); background: transparent; color: var(--paper); cursor: pointer; font-size: 16px; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.mockup-carousel-actions > button:hover { background: var(--forest-soft); color: var(--forest); transform: translateY(-2px); }
+.mockup-carousel-dots { display: flex; gap: 6px; }
+.mockup-carousel-dots button { width: 17px; height: 3px; padding: 0; border: 0; background: rgba(255,255,255,.28); cursor: pointer; transition: width .25s ease, background .25s ease; }
+.mockup-carousel-dots button.is-active { width: 31px; background: var(--forest-soft); }
+
+@media (max-width: 620px) {
+  .mockup-carousel-stage { height: 260px; }.mockup-carousel-controls p span { display: none; }.mockup-carousel-controls { padding-top: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mockup-carousel-slide { transition: none; }
+}
