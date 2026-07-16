@@ -1,5 +1,6 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
+import { DispersingHeadline } from "./_components/DispersingHeadline";
 import { creativeImages, services } from "./_components/site-data";
 
 const featureCards = [
@@ -21,7 +22,7 @@ export default function Home() {
               <span className="green-orb orb-right" aria-hidden="true" />
               <span className="hero-sticker hero-sticker-one" aria-hidden="true">DESIGN<br />WITH ZING</span>
               <span className="hero-sticker hero-sticker-two" aria-hidden="true">✦</span>
-              <h1>Creative work<br />that helps brands <em>stand out.</em></h1>
+              <DispersingHeadline />
               <p>Bayworld Creatives brings together branding, professional design, quality printing and effective digital support for businesses ready to grow with confidence.</p>
               <a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
             </div>

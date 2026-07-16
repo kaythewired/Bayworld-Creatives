@@ -606,3 +606,21 @@ html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:n
   .reference-section-title { max-width: 820px; }
   .cta-inner { max-width: 1040px; }
 }
+
+/* A short, repeatable scatter-and-assemble moment for the home headline. */
+.dispersing-headline { isolation: isolate; }
+.dispersing-line { display: block; }
+.dispersing-line-accent { color: var(--forest-bright); }
+.dispersing-word, .dispersing-letter { display: inline-block; }
+.dispersing-letter { animation: headline-scatter 8.8s cubic-bezier(.22,.75,.28,1) infinite; transform-origin: 50% 70%; will-change: transform, opacity, filter; }
+.dispersing-word + .dispersing-word { margin-left: .22em; }
+
+@keyframes headline-scatter {
+  0%, 47%, 100% { opacity: 1; filter: blur(0); transform: translate(0,0) rotate(0) scale(1); }
+  57% { opacity: .42; filter: blur(.8px); transform: translate(var(--scatter-x), var(--scatter-y)) rotate(var(--scatter-rotate)) scale(.9); }
+  68% { opacity: 1; filter: blur(0); transform: translate(0,0) rotate(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dispersing-letter { animation: none; }
+}
