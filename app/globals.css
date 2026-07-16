@@ -276,7 +276,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
   .header-inner { position: relative; height: 84px; }
   .brand-link { padding: 0; }
   .brand-logo { width: 154px; height: 60px; }
-  .nav-links { position: absolute; z-index: 2; top: 100%; right: -16px; left: -16px; display: grid; gap: 0; max-height: 0; margin: 0; padding: 0 16px; overflow: hidden; border-bottom: 1px solid transparent; background: var(--black); opacity: 0; pointer-events: none; transform: translateY(-12px); transition: max-height 360ms cubic-bezier(.2,.8,.2,1), padding 360ms cubic-bezier(.2,.8,.2,1), opacity 220ms ease, transform 360ms cubic-bezier(.2,.8,.2,1), border-color 360ms ease; }
+  .nav-links { position: absolute; z-index: 12; top: calc(100% + 26px); right: -16px; left: -16px; display: grid; gap: 0; max-height: 0; margin: 0; padding: 0 16px; overflow: hidden; border-bottom: 1px solid transparent; background: var(--black); opacity: 0; pointer-events: none; transform: translateY(-12px); transition: max-height 360ms cubic-bezier(.2,.8,.2,1), padding 360ms cubic-bezier(.2,.8,.2,1), opacity 220ms ease, transform 360ms cubic-bezier(.2,.8,.2,1), border-color 360ms ease; }
   .nav-links.is-open { max-height: 330px; padding: 12px 16px 18px; border-bottom-color: rgba(255,255,255,.2); opacity: 1; pointer-events: auto; transform: translateY(0); }
   .nav-links a { width: 100%; padding: 15px 3px; border-bottom: 1px solid rgba(255,255,255,.12); font-size: 14px; }
   .nav-links a:hover, .nav-links a:focus-visible { transform: translateX(5px); }
@@ -490,7 +490,7 @@ body { overflow-x: hidden; }
 .playful-scroll-meter::after { position: absolute; inset: 0; border-radius: inherit; background: var(--forest-bright); content: ""; transform: scaleY(var(--scroll-progress)); transform-origin: top; }
 .playful-spark { position: fixed; z-index: 53; top: var(--spark-y); left: var(--spark-x); width: 13px; height: 13px; border-radius: 50%; background: var(--spark-color); box-shadow: 0 -22px 0 -4px var(--spark-color), 0 22px 0 -4px var(--spark-color), 22px 0 0 -4px var(--spark-color), -22px 0 0 -4px var(--spark-color); transform: translate(-50%, -50%); animation: spark-pop .72s cubic-bezier(.2,.8,.2,1) both; }
 
-.site-header { overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.1); }
+.site-header { overflow: visible; box-shadow: 0 5px 20px rgba(0,0,0,.1); }
 .header-cta { position: relative; overflow: hidden; }
 .header-cta i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--forest-soft); box-shadow: 0 0 0 0 rgba(207,226,207,.75); animation: header-pulse 1.7s infinite; }
 .playful-ribbon { height: 26px; overflow: hidden; border-top: 1px solid rgba(255,255,255,.12); background: var(--forest-bright); color: white; white-space: nowrap; }
