@@ -12,10 +12,9 @@ export function ScrollReveal() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const targets = Array.from(document.querySelectorAll<HTMLElement>(revealSelector));
-    let lastScrollY = window.scrollY;
-    let scrollDirection: "up" | "down" = "down";
-    targets.forEach((target) => {
+    targets.forEach((target, index) => {
       target.classList.add("scroll-reveal");
+      target.style.setProperty("--reveal-delay", `${Math.min(index * 45, 180)}ms`);
     });
 
     if (!("IntersectionObserver" in window)) {
@@ -23,20 +22,11 @@ export function ScrollReveal() {
       return;
     }
 
-    const trackDirection = () => {
-      const currentScrollY = window.scrollY;
-      if (Math.abs(currentScrollY - lastScrollY) > 4) {
-        scrollDirection = currentScrollY < lastScrollY ? "up" : "down";
-      }
-      lastScrollY = currentScrollY;
-    };
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const target = entry.target as HTMLElement;
           if (entry.isIntersecting) {
-            target.classList.toggle("reveal-up", scrollDirection === "up");
             window.requestAnimationFrame(() => target.classList.add("is-revealed"));
             return;
           }
@@ -47,18 +37,16 @@ export function ScrollReveal() {
             entry.boundingClientRect.bottom < 0 ||
             entry.boundingClientRect.top > window.innerHeight
           ) {
-            target.classList.remove("is-revealed", "reveal-up");
+            target.classList.remove("is-revealed");
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -8%" },
+      { threshold: 0.08, rootMargin: "0px 0px -5%" },
     );
 
-    window.addEventListener("scroll", trackDirection, { passive: true });
     const frame = window.requestAnimationFrame(() => targets.forEach((target) => observer.observe(target)));
     return () => {
       window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", trackDirection);
       observer.disconnect();
     };
   }, []);
