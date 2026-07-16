@@ -35,6 +35,9 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .header-inner { display: flex; align-items: center; height: 104px; gap: 30px; }
 .brand-link { display: block; flex: 0 0 auto; padding: 0; background: transparent; }
 .brand-logo { width: 304px; height: 84px; object-fit: contain; object-position: center; filter: drop-shadow(0 2px 1px rgba(0,0,0,.32)); }
+.brand-logo-night, .footer-logo-night { display: none; }
+html[data-theme="night"] .brand-logo-day, html[data-theme="night"] .footer-logo-day { display: none; }
+html[data-theme="night"] .brand-logo-night, html[data-theme="night"] .footer-logo-night { display: block; }
 .nav-links { display: flex; gap: 33px; margin-left: auto; }
 .nav-links a { color: rgba(255, 255, 255, 0.76); font-size: 12px; font-weight: 700; transition: color 180ms ease; }
 .nav-links a:hover { color: var(--forest-soft); }
