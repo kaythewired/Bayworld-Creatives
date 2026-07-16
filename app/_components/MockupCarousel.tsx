@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-type CarouselImage = { src: string; alt: string; company: string };
+type CarouselImage = { src: string; alt: string; company: string; logo?: string };
 
 export function MockupCarousel({ images }: { images: CarouselImage[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,6 +23,7 @@ export function MockupCarousel({ images }: { images: CarouselImage[] }) {
         {images.map((image, index) => (
           <figure className={`mockup-carousel-slide${index === activeIndex ? " is-active" : ""}`} key={image.src} aria-hidden={index !== activeIndex}>
             <img src={image.src} alt={index === activeIndex ? image.alt : ""} />
+            {image.logo && <img className="mockup-carousel-logo" src={image.logo} alt="" aria-hidden="true" />}
             <figcaption>{image.company}</figcaption>
           </figure>
         ))}
