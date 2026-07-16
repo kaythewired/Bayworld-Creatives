@@ -39,8 +39,10 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .site-header.is-scrolled .brand-logo-white { display: none; }
 .site-header.is-scrolled .brand-logo-green { display: block; }
 .nav-links { display: flex; gap: 33px; margin-left: auto; }
-.nav-links a { color: rgba(255, 255, 255, 0.76); font-size: 12px; font-weight: 700; transition: color 180ms ease; }
-.nav-links a:hover { color: var(--forest-soft); }
+.nav-links a { position: relative; display: inline-block; padding: 9px 1px; color: rgba(255, 255, 255, 0.76); font-size: 12px; font-weight: 700; transition: color 180ms ease, transform 240ms cubic-bezier(.2,.85,.28,1); }
+.nav-links a::after { position: absolute; right: 0; bottom: 3px; left: 0; height: 2px; background: var(--forest-bright); content: ""; transform: scaleX(0); transform-origin: right center; transition: transform 260ms cubic-bezier(.2,.85,.28,1); }
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--forest-soft); transform: translateY(-3px) rotate(-1deg); }
+.nav-links a:hover::after, .nav-links a:focus-visible::after { transform: scaleX(1); transform-origin: left center; }
 .header-cta { display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; border: 1px solid var(--forest-bright); color: var(--forest-soft); font-size: 12px; font-weight: 800; transition: background 180ms ease, color 180ms ease; }
 .header-cta:hover { background: var(--forest-bright); color: var(--paper); }
 
@@ -605,6 +607,7 @@ html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:n
 
 @media (prefers-reduced-motion: reduce) {
   .brand-logo, .footer-logo { animation: none !important; }
+  .nav-links a, .nav-links a::after { transition: none; }
 }
 
 /* Expanded editorial scale */
