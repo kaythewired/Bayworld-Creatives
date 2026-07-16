@@ -8,12 +8,12 @@ export const services = [
 ];
 
 export const creativeImages = [
-  { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85", alt: "Creative team sharing ideas around a table" },
-  { src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85", alt: "Colleagues planning a project" },
-  { src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85", alt: "Creative professionals collaborating in a studio" },
-  { src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85", alt: "Designer presenting work to a client" },
-  { src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85", alt: "Team reviewing a creative project" },
-  { src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85", alt: "Professional using a laptop in a creative workspace" },
+  { src: "/mockups/brand-identity.png", alt: "Forest-green brand identity stationery mockup" },
+  { src: "/mockups/print-production.png", alt: "Premium print materials and packaging mockup" },
+  { src: "/mockups/digital-experience.png", alt: "Responsive website experience on laptop, tablet and phone" },
+  { src: "/mockups/social-content.png", alt: "Social content cards and phone mockup" },
+  { src: "/mockups/signage-merchandise.png", alt: "Creative signage and branded merchandise mockup" },
+  { src: "/mockups/creative-direction.png", alt: "Art-directed campaign materials and paper sculpture mockup" },
 ];
 
 export const values = [

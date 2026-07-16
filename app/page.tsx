@@ -69,7 +69,7 @@ export default function Home() {
               <p>Our work is shaped around your goals, your audience and the everyday places people meet your business — online, in print and in person.</p>
               <a className="reference-text-link" href="/about">Our process <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <div className="reference-belief-visual"><span className="visual-frame" aria-hidden="true" /><img src={creativeImages[2].src} alt="Creative team working together" /></div>
+            <div className="reference-belief-visual"><span className="visual-frame" aria-hidden="true" /><img src={creativeImages[2].src} alt="Responsive website experience mockup" /></div>
           </div>
           <div className="site-shell reference-stats">
             <div><strong>01</strong><span>creative partner for your brand</span></div>
@@ -93,7 +93,7 @@ export default function Home() {
         <section className="reference-work section">
           <div className="site-shell reference-work-grid">
             <div><p className="reference-eyebrow">Creative work that delivers</p><h2>A stronger presence<br />starts with a clear <em>direction.</em></h2><p>Explore the branding, print and digital work we shape for businesses that are ready to be seen.</p><a className="reference-text-link" href="/work">View Our Work <span aria-hidden="true">&rarr;</span></a></div>
-            <div className="reference-work-stack"><figure><img src={creativeImages[0].src} alt="Creative collaborators" /></figure><figure><img src={creativeImages[4].src} alt="Team discussing an idea" /></figure></div>
+            <div className="reference-work-stack"><figure><img src={creativeImages[0].src} alt="Brand identity stationery mockup" /></figure><figure><img src={creativeImages[4].src} alt="Signage and branded merchandise mockup" /></figure></div>
           </div>
         </section>
 
