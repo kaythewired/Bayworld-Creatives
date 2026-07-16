@@ -15,6 +15,9 @@ export function PlayfulInteractions() {
     let animationFrame = 0;
     let pointerX = 0;
     let pointerY = 0;
+    let lastScrollY = window.scrollY;
+    let lastScatterAt = 0;
+    let headlineTimer = 0;
 
     const paintPointer = () => {
       root.style.setProperty("--playful-pointer-x", `${pointerX}px`);
@@ -41,6 +44,19 @@ export function PlayfulInteractions() {
       const available = document.documentElement.scrollHeight - window.innerHeight;
       const progress = available > 0 ? window.scrollY / available : 0;
       root.style.setProperty("--scroll-progress", String(progress));
+
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY + 10;
+      const now = Date.now();
+      if (!reducedMotion.matches && scrollingDown && now - lastScatterAt > 1100) {
+        lastScatterAt = now;
+        root.classList.remove("headline-scatter-active");
+        void root.offsetWidth;
+        root.classList.add("headline-scatter-active");
+        window.clearTimeout(headlineTimer);
+        headlineTimer = window.setTimeout(() => root.classList.remove("headline-scatter-active"), 1500);
+      }
+      lastScrollY = currentScrollY;
     };
 
     onScroll();
@@ -52,6 +68,8 @@ export function PlayfulInteractions() {
       window.removeEventListener("pointerdown", onDown);
       window.removeEventListener("scroll", onScroll);
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      window.clearTimeout(headlineTimer);
+      root.classList.remove("headline-scatter-active");
     };
   }, []);
 
