@@ -3,9 +3,8 @@
 import { useEffect } from "react";
 
 const revealSelector = [
-  ".site-header",
-  "main > section",
-  ".site-footer",
+  "main > section > .site-shell",
+  ".site-footer > .site-shell",
 ].join(",");
 
 export function ScrollReveal() {
@@ -38,15 +37,21 @@ export function ScrollReveal() {
           const target = entry.target as HTMLElement;
           if (entry.isIntersecting) {
             target.classList.toggle("reveal-up", scrollDirection === "up");
-            target.classList.add("is-revealed");
+            window.requestAnimationFrame(() => target.classList.add("is-revealed"));
             return;
           }
-          if (scrollDirection === "down" && entry.boundingClientRect.top < 0) {
+
+          // Reset only after the content is completely out of view. This makes
+          // the animation replay reliably when the visitor returns to it.
+          if (
+            entry.boundingClientRect.bottom < 0 ||
+            entry.boundingClientRect.top > window.innerHeight
+          ) {
             target.classList.remove("is-revealed", "reveal-up");
           }
         });
       },
-      { threshold: 0.01, rootMargin: "0px 0px 8%" },
+      { threshold: 0.08, rootMargin: "0px 0px -8%" },
     );
 
     window.addEventListener("scroll", trackDirection, { passive: true });
