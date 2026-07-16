@@ -8,12 +8,12 @@ export const services = [
 ];
 
 export const creativeImages = [
-  { src: "/mockups/brand-identity.png", alt: "Forest-green brand identity stationery mockup" },
-  { src: "/mockups/print-production.png", alt: "Premium print materials and packaging mockup" },
-  { src: "/mockups/digital-experience.png", alt: "Responsive website experience on laptop, tablet and phone" },
-  { src: "/mockups/social-content.png", alt: "Social content cards and phone mockup" },
-  { src: "/mockups/signage-merchandise.png", alt: "Creative signage and branded merchandise mockup" },
-  { src: "/mockups/creative-direction.png", alt: "Art-directed campaign materials and paper sculpture mockup" },
+  { src: "/mockups/brand-identity.png", alt: "Forest-green brand identity stationery mockup", company: "Brio House" },
+  { src: "/mockups/print-production.png", alt: "Premium print materials and packaging mockup", company: "Miro Market" },
+  { src: "/mockups/digital-experience.png", alt: "Responsive website experience on laptop, tablet and phone", company: "Northline Studio" },
+  { src: "/mockups/social-content.png", alt: "Social content cards and phone mockup", company: "Piko Society" },
+  { src: "/mockups/signage-merchandise.png", alt: "Creative signage and branded merchandise mockup", company: "Kora Supply Co." },
+  { src: "/mockups/creative-direction.png", alt: "Art-directed campaign materials and paper sculpture mockup", company: "Nuru Collective" },
 ];
 
 export const values = [
@@ -32,7 +32,7 @@ export const process = [
 ];
 
 export const projects = [
-  { type: "Brand Identity", label: "Identity / Strategy", className: "project-identity", description: "A distinct visual system that gives a business a stronger starting point.", image: creativeImages[3] },
-  { type: "Print & Production", label: "Print / Production", className: "project-print", description: "Printed brand materials designed to work beautifully in the real world.", image: creativeImages[1] },
-  { type: "Digital Experience", label: "Web / Digital", className: "project-digital", description: "A clear, responsive digital presence built around the next customer action.", image: creativeImages[5] },
+  { type: "Brand Identity", label: "Identity / Strategy", company: "Piko Society", className: "project-identity", description: "A distinct visual system that gives a business a stronger starting point.", image: creativeImages[3] },
+  { type: "Print & Production", label: "Print / Production", company: "Miro Market", className: "project-print", description: "Printed brand materials designed to work beautifully in the real world.", image: creativeImages[1] },
+  { type: "Digital Experience", label: "Web / Digital", company: "Nuru Collective", className: "project-digital", description: "A clear, responsive digital presence built around the next customer action.", image: creativeImages[5] },
 ];

@@ -691,6 +691,7 @@ html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:n
 .mockup-carousel-slide::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.22), transparent 45%, rgba(0,0,0,.14)); content: ""; }
 .mockup-carousel-slide.is-active { z-index: 1; opacity: 1; transform: scale(1) rotate(0); }
 .mockup-carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+.mockup-carousel-slide figcaption { position: absolute; z-index: 2; right: 21px; bottom: 18px; max-width: 58%; padding: 8px 11px; background: rgba(17,18,17,.82); color: var(--paper); font-size: clamp(11px, 1.4vw, 16px); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .mockup-carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 0 0; color: rgba(255,255,255,.67); }
 .mockup-carousel-controls p { display: flex; gap: 10px; margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .mockup-carousel-controls p b { color: var(--forest-soft); font-weight: 800; }
