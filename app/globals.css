@@ -17,6 +17,9 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-weight: 500; }
+body::before, body::after { position: fixed; z-index: 100; right: 0; left: 0; height: 50.5vh; background: var(--black); content: ""; pointer-events: none; will-change: transform; }
+body::before { top: 0; border-bottom: 2px solid var(--forest-bright); animation: eyelid-open-top 1.05s cubic-bezier(.7,0,.2,1) both; }
+body::after { bottom: 0; border-top: 2px solid var(--forest-bright); animation: eyelid-open-bottom 1.05s cubic-bezier(.7,0,.2,1) both; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 2px solid var(--forest-bright); outline-offset: 4px; }
 img { display: block; max-width: 100%; }
@@ -236,6 +239,8 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .contact-detail-grid > div > p:not(.footer-label), .contact-detail-grid a { margin: 0; color: var(--forest); font-size: 14px; font-weight: 700; }
 
 @keyframes rise-in { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes eyelid-open-top { 0%, 16% { transform: translateY(0); } 100% { transform: translateY(-105%); } }
+@keyframes eyelid-open-bottom { 0%, 16% { transform: translateY(0); } 100% { transform: translateY(105%); } }
 @keyframes art-reveal { from { clip-path: inset(0 100% 0 0); transform: translateY(12px); } to { clip-path: inset(0); transform: translateY(0); } }
 @keyframes drift-one { 0%,100% { transform: translate(0); } 50% { transform: translate(-14px, 12px); } }
 @keyframes drift-two { 0%,100% { transform: translate(0) scale(1); } 50% { transform: translate(12px,-8px) scale(1.04); } }
@@ -584,6 +589,7 @@ body { overflow-x: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   .playful-interactions, .playful-ribbon, .hero-sticker, .reference-hero::after, .hero-photo, .green-orb, .reference-dark-services::before, .page-hero::after, .page-hero-sticker, .page-hero-spark, .reference-stats strong { display: none !important; }
+  body::before, body::after { display: none; }
 }
 
 /* Day / night switch and animated brand marks */
