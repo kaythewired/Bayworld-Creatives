@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 export function SiteHeader() {
   const [isNight, setIsNight] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("bayworld-theme");
@@ -25,6 +26,8 @@ export function SiteHeader() {
     window.localStorage.setItem("bayworld-theme", nextTheme ? "night" : "day");
   };
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <div className="site-shell header-inner">
@@ -32,13 +35,17 @@ export function SiteHeader() {
           <img className="brand-logo brand-logo-white" src="/bayworld-logo-night.png" alt="Bayworld Creatives" />
           <img className="brand-logo brand-logo-green" src="/bayworld-logo-day.png" alt="Bayworld Creatives" />
         </a>
-        <nav className="nav-links" aria-label="Primary navigation">
-          <a href="/about">About</a><a href="/services">Services</a><a href="/work">Work</a><a href="/contact">Contact</a>
+        <nav id="site-menu" className={`nav-links${isMenuOpen ? " is-open" : ""}`} aria-label="Primary navigation">
+          <a href="/about" onClick={closeMenu}>About</a><a href="/services" onClick={closeMenu}>Services</a><a href="/work" onClick={closeMenu}>Work</a><a href="/contact" onClick={closeMenu}>Contact</a>
+          <a className="mobile-menu-cta" href="/contact" onClick={closeMenu}>Start a project <span aria-hidden="true">&rarr;</span></a>
         </nav>
         <button className="theme-toggle" type="button" onClick={toggleTheme} aria-pressed={isNight} aria-label={`Switch to ${isNight ? "day" : "night"} mode`}>
           <span className="theme-toggle-sun" aria-hidden="true">&#9728;</span>
           <span className="theme-toggle-moon" aria-hidden="true">&#9790;</span>
           <span className="theme-toggle-thumb" aria-hidden="true" />
+        </button>
+        <button className={`menu-toggle${isMenuOpen ? " is-open" : ""}`} type="button" onClick={() => setIsMenuOpen((open) => !open)} aria-controls="site-menu" aria-expanded={isMenuOpen} aria-label={`${isMenuOpen ? "Close" : "Open"} menu`}>
+          <span /><span /><span />
         </button>
         <a className="header-cta" href="/contact"><i aria-hidden="true" /> Let&apos;s talk <span aria-hidden="true">&rarr;</span></a>
       </div>
