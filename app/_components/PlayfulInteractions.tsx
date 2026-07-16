@@ -47,6 +47,9 @@ export function PlayfulInteractions() {
 
       const currentScrollY = window.scrollY;
       const scrollingDown = currentScrollY > lastScrollY + 10;
+      const scrollingUp = currentScrollY < lastScrollY - 10;
+      if (scrollingUp) root.classList.add("scrolling-up");
+      if (scrollingDown) root.classList.remove("scrolling-up");
       const now = Date.now();
       if (!reducedMotion.matches && scrollingDown && now - lastScatterAt > 1100) {
         lastScatterAt = now;
@@ -70,6 +73,7 @@ export function PlayfulInteractions() {
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
       window.clearTimeout(headlineTimer);
       root.classList.remove("headline-scatter-active");
+      root.classList.remove("scrolling-up");
     };
   }, []);
 
