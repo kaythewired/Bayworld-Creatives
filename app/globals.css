@@ -143,7 +143,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .cta .button-primary:hover { background: var(--paper); color: var(--black); }
 
 .site-footer { position: relative; isolation: isolate; overflow: hidden; padding: 55px 0 19px; background: var(--black); color: var(--paper); transition: background-color 420ms cubic-bezier(.2,.8,.2,1), color 320ms ease; }
-.footer-image-fade { position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 39%; opacity: .42; background-image: linear-gradient(90deg, var(--black) 0%, rgba(17,18,17,.94) 10%, rgba(17,18,17,.22) 56%, rgba(17,18,17,.1) 100%), linear-gradient(0deg, rgba(17,18,17,.72), transparent 62%), url("/gallery/koka-van-rear-side.webp"); background-position: center, center, right center; background-size: cover; pointer-events: none; transition: opacity 480ms cubic-bezier(.2,.8,.2,1), transform 760ms cubic-bezier(.2,.8,.2,1); }
+.footer-image-fade { position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 39%; opacity: .42; background-image: linear-gradient(90deg, var(--black) 0%, rgba(17,18,17,.94) 10%, rgba(17,18,17,.22) 56%, rgba(17,18,17,.1) 100%), linear-gradient(0deg, rgba(17,18,17,.72), transparent 62%), url("/gallery/ceo-smart-footer.webp"); background-position: center, center, 60% 58%; background-size: cover; pointer-events: none; transition: opacity 480ms cubic-bezier(.2,.8,.2,1), transform 760ms cubic-bezier(.2,.8,.2,1); }
 .footer-grid, .footer-bottom { position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .7fr .7fr 1fr; gap: 30px; padding-bottom: 55px; }
 .footer-brand p { max-width: 230px; margin: 0; color: var(--forest-soft); font-family: Georgia, "Times New Roman", serif; font-size: 24px; line-height: .98; letter-spacing: -.06em; }
@@ -341,7 +341,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
   .contact-detail-grid > div:last-child { padding-bottom: 0; border-bottom: 0; }
   .footer-grid { gap: 27px; padding-bottom: 45px; }
   .footer-bottom { flex-direction: column; gap: 7px; }
-  .footer-image-fade { left: 0; opacity: .22; background-image: linear-gradient(90deg, rgba(17,18,17,.9), rgba(17,18,17,.74)), linear-gradient(0deg, rgba(17,18,17,.72), transparent 62%), url("/gallery/koka-van-rear-side.webp"); background-position: center; }
+  .footer-image-fade { left: 0; opacity: .22; background-image: linear-gradient(90deg, rgba(17,18,17,.9), rgba(17,18,17,.74)), linear-gradient(0deg, rgba(17,18,17,.72), transparent 62%), url("/gallery/ceo-smart-footer.webp"); background-position: center; }
 }
 
 @media (max-width: 340px) {
