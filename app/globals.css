@@ -142,7 +142,9 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .cta .button-primary { background: var(--black); }
 .cta .button-primary:hover { background: var(--paper); color: var(--black); }
 
-.site-footer { padding: 55px 0 19px; background: var(--black); color: var(--paper); transition: background-color 420ms cubic-bezier(.2,.8,.2,1), color 320ms ease; }
+.site-footer { position: relative; isolation: isolate; overflow: hidden; padding: 55px 0 19px; background: var(--black); color: var(--paper); transition: background-color 420ms cubic-bezier(.2,.8,.2,1), color 320ms ease; }
+.footer-image-fade { position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 39%; opacity: .42; background-image: linear-gradient(90deg, var(--black) 0%, rgba(17,18,17,.94) 10%, rgba(17,18,17,.22) 56%, rgba(17,18,17,.1) 100%), linear-gradient(0deg, rgba(17,18,17,.72), transparent 62%), url("/gallery/koka-van-rear-side.webp"); background-position: center, center, right center; background-size: cover; pointer-events: none; transition: opacity 480ms cubic-bezier(.2,.8,.2,1), transform 760ms cubic-bezier(.2,.8,.2,1); }
+.footer-grid, .footer-bottom { position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .7fr .7fr 1fr; gap: 30px; padding-bottom: 55px; }
 .footer-brand p { max-width: 230px; margin: 0; color: var(--forest-soft); font-family: Georgia, "Times New Roman", serif; font-size: 24px; line-height: .98; letter-spacing: -.06em; }
 .footer-logo { width: min(100%, 300px); margin: 0; }
@@ -153,6 +155,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 
 @media (hover: hover) {
   .site-footer:hover { background: var(--forest); }
+  .site-footer:hover .footer-image-fade { opacity: .3; transform: scale(1.025); }
   .site-footer:hover .footer-label, .site-footer:hover .footer-grid a:hover { color: var(--paper); }
   .site-footer:hover .footer-grid a, .site-footer:hover .footer-grid > div > p:not(.footer-label) { color: rgba(255,255,255,.84); }
   .site-footer:hover .footer-bottom { border-top-color: rgba(255,255,255,.35); color: rgba(255,255,255,.64); }
@@ -338,6 +341,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
   .contact-detail-grid > div:last-child { padding-bottom: 0; border-bottom: 0; }
   .footer-grid { gap: 27px; padding-bottom: 45px; }
   .footer-bottom { flex-direction: column; gap: 7px; }
+  .footer-image-fade { left: 0; opacity: .22; background-image: linear-gradient(90deg, rgba(17,18,17,.9), rgba(17,18,17,.74)), linear-gradient(0deg, rgba(17,18,17,.72), transparent 62%), url("/gallery/koka-van-rear-side.webp"); background-position: center; }
 }
 
 @media (max-width: 340px) {
@@ -681,6 +685,35 @@ html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:n
 }
 
 /* Home-page mockup carousel */
+/* Front-page portfolio gallery */
+.portfolio-gallery { overflow: hidden; padding: 112px 0 86px; background: #131513; color: var(--paper); }
+.portfolio-gallery-heading { display: grid; grid-template-columns: 1.05fr .95fr; align-items: end; gap: 56px; margin-bottom: 38px; }
+.portfolio-gallery .reference-eyebrow { color: var(--forest-soft); }
+.portfolio-gallery h2 { margin: 0; color: var(--paper); font-size: clamp(48px, 5.4vw, 80px); line-height: .84; }
+.portfolio-gallery h2 em { color: var(--forest-bright); }
+.portfolio-gallery-heading > p { max-width: 420px; margin: 0 0 6px auto; color: rgba(255,255,255,.62); font-size: 13px; line-height: 1.65; }
+.portfolio-gallery-stage { position: relative; height: clamp(360px, 52vw, 690px); overflow: hidden; border: 1px solid rgba(255,255,255,.18); background: #222624; box-shadow: 0 24px 54px rgba(0,0,0,.24); }
+.portfolio-gallery-slide { position: absolute; inset: 0; margin: 0; opacity: 0; pointer-events: none; transform: scale(1.05); transition: opacity .65s ease, transform 1.05s cubic-bezier(.16,1,.3,1); }
+.portfolio-gallery-slide.is-active { z-index: 1; opacity: 1; transform: scale(1); }
+.portfolio-gallery-slide::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 46%, rgba(0,0,0,.62)); content: ""; }
+.portfolio-gallery-slide > img { width: 100%; height: 100%; object-fit: cover; }
+.portfolio-gallery-slide figcaption { position: absolute; z-index: 2; right: 26px; bottom: 24px; left: 26px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.portfolio-gallery-slide figcaption span { color: rgba(255,255,255,.65); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.portfolio-gallery-slide figcaption strong { color: white; font-family: Georgia, "Times New Roman", serif; font-size: clamp(25px, 3vw, 48px); line-height: .9; letter-spacing: -.04em; }
+.portfolio-gallery-controls { position: absolute; z-index: 3; top: 18px; right: 18px; display: flex; align-items: center; gap: 8px; }
+.portfolio-gallery-controls button { min-width: 79px; height: 33px; border: 1px solid rgba(255,255,255,.48); background: rgba(17,18,17,.56); color: white; cursor: pointer; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.portfolio-gallery-controls button:hover { background: var(--forest-soft); color: var(--forest); transform: translateY(-2px); }
+.portfolio-gallery-controls p { margin: 0 4px; color: rgba(255,255,255,.64); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.portfolio-gallery-controls p b { color: var(--forest-soft); }
+.portfolio-gallery-footer { display: grid; grid-template-columns: 190px 1fr; align-items: center; gap: 26px; margin-top: 15px; }
+.portfolio-gallery-footer > p { margin: 0; color: var(--paper); font-size: 12px; font-weight: 700; line-height: 1.35; }
+.portfolio-gallery-footer > p span { display: block; margin-bottom: 4px; color: rgba(255,255,255,.52); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.portfolio-gallery-thumbnails { display: flex; gap: 8px; overflow-x: auto; padding: 2px 1px 7px; scrollbar-width: thin; }
+.portfolio-gallery-thumbnails button { position: relative; flex: 0 0 92px; height: 58px; overflow: hidden; padding: 0; border: 1px solid transparent; background: #242724; cursor: pointer; opacity: .52; transition: opacity .2s ease, transform .2s ease, border-color .2s ease; }
+.portfolio-gallery-thumbnails button:hover { opacity: .9; transform: translateY(-3px); }
+.portfolio-gallery-thumbnails button.is-active { border-color: var(--forest-soft); opacity: 1; }
+.portfolio-gallery-thumbnails img { width: 100%; height: 100%; object-fit: cover; }
+
 .mockup-carousel { position: relative; z-index: 2; }
 .mockup-carousel-stage { position: relative; height: clamp(300px, 34vw, 500px); overflow: hidden; border: 1px solid rgba(255,255,255,.16); background: #1b201c; }
 .mockup-carousel-slide { position: absolute; inset: 0; margin: 0; opacity: 0; pointer-events: none; transform: scale(1.08) rotate(-1.2deg); transition: opacity .72s ease, transform 1.2s cubic-bezier(.2,.75,.2,1); }
@@ -701,9 +734,10 @@ html[data-theme="night"] .image-contact-details .contact-detail-grid > div > p:n
 .mockup-carousel-dots button.is-active { width: 31px; background: var(--forest-soft); }
 
 @media (max-width: 620px) {
+  .portfolio-gallery { padding: 74px 0 58px; }.portfolio-gallery-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 27px; }.portfolio-gallery-heading > p { margin-left: 0; }.portfolio-gallery-stage { height: 370px; }.portfolio-gallery-slide > img { object-position: center; }.portfolio-gallery-slide figcaption { right: 17px; bottom: 17px; left: 17px; align-items: start; flex-direction: column; gap: 5px; }.portfolio-gallery-slide figcaption strong { font-size: 31px; }.portfolio-gallery-controls { top: 12px; right: 12px; gap: 5px; }.portfolio-gallery-controls button { min-width: 66px; height: 30px; font-size: 8px; }.portfolio-gallery-controls p { font-size: 9px; }.portfolio-gallery-footer { grid-template-columns: 1fr; gap: 13px; }.portfolio-gallery-thumbnails button { flex-basis: 76px; height: 50px; }
   .mockup-carousel-stage { height: 260px; }.mockup-carousel-controls p span { display: none; }.mockup-carousel-controls { padding-top: 11px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .mockup-carousel-slide { transition: none; }
+  .mockup-carousel-slide, .portfolio-gallery-slide { transition: none; }
 }

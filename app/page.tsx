@@ -1,8 +1,8 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
 import { DispersingHeadline } from "./_components/DispersingHeadline";
-import { MockupCarousel } from "./_components/MockupCarousel";
-import { creativeImages, services } from "./_components/site-data";
+import { PortfolioGallery } from "./_components/PortfolioGallery";
+import { creativeImages, portfolioGallery, services } from "./_components/site-data";
 
 const featureCards = [
   { title: "Build a standout brand", text: "Clear identity systems, memorable graphic design and campaign assets that help your business look established.", image: creativeImages[3] },
@@ -28,8 +28,9 @@ export default function Home() {
               <a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
-          <MockupCarousel images={creativeImages} />
         </section>
+
+        <PortfolioGallery items={portfolioGallery} />
 
         <section className="reference-intro section">
           <div className="site-shell reference-intro-grid">

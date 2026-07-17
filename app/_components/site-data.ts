@@ -16,6 +16,33 @@ export const creativeImages = [
   { src: "/mockups/creative-direction.png", alt: "Art-directed campaign materials and paper sculpture mockup", company: "Nuru Collective" },
 ];
 
+export const portfolioGallery = [
+  { src: "/gallery/ceo-smart-flyers.webp", alt: "CEO Smart delivery flyer campaign mockup", title: "CEO Smart campaign", category: "Campaign print" },
+  { src: "/gallery/shipping-cards.webp", alt: "T and T Shipping business card mockup", title: "T and T Shipping", category: "Brand identity" },
+  { src: "/gallery/city-agents-rollup.webp", alt: "City agents rollup banner mockup", title: "City agents rollup", category: "Large format print" },
+  { src: "/gallery/porbeni-notebook.webp", alt: "Memorial notebook cover mockup", title: "Porbeni memorial book", category: "Print production" },
+  { src: "/gallery/havana-mousepad.webp", alt: "Havana Specialist Hospital mousepad mockup", title: "Havana Specialist Hospital", category: "Branded merchandise" },
+  { src: "/gallery/joy-ability-presentation.webp", alt: "Joy Ability folded presentation mockup", title: "Joy Ability presentation", category: "Print production" },
+  { src: "/gallery/glam-ma-notebooks.webp", alt: "Glam-ma event notebook covers", title: "Glam-ma event books", category: "Event print" },
+  { src: "/gallery/havana-notebook.webp", alt: "Havana customer service notebook", title: "Havana customer service", category: "Campaign print" },
+  { src: "/gallery/heroes-of-indrive.webp", alt: "Heroes of inDrive car dashboard branding", title: "Heroes of inDrive", category: "Vehicle branding" },
+  { src: "/gallery/pharmacist-notebook.webp", alt: "Pharmacist notebook cover mockup", title: "Pharmacist notebook", category: "Branded stationery" },
+  { src: "/gallery/onrach-billboard.webp", alt: "Onrach investment billboard design", title: "Onrach billboard", category: "Outdoor advertising" },
+  { src: "/gallery/izu-wedding-card.webp", alt: "Traditional marriage invitation card", title: "Izu wedding invitation", category: "Event print" },
+  { src: "/gallery/festival-leaflets.webp", alt: "Festival of Live printed leaflet set", title: "Festival of Live", category: "Event campaign" },
+  { src: "/gallery/ninee-trifold.webp", alt: "Ninee trifold brochure mockup", title: "Ninee trifold brochure", category: "Brochure design" },
+  { src: "/gallery/ndubuisi-isometric.webp", alt: "Professor Ndubuisi memorial brochure collection", title: "Ndubuisi memorial collection", category: "Editorial print" },
+  { src: "/gallery/admaks-flyers.webp", alt: "Admaks event flyer collection", title: "Admaks event flyers", category: "Event campaign" },
+  { src: "/gallery/de-trevines-bag.webp", alt: "De Trevines branded shopping bag", title: "De Trevines bag", category: "Packaging" },
+  { src: "/gallery/bankole-open-brochure.webp", alt: "Bankole celebration booklet mockup", title: "Bankole celebration book", category: "Editorial print" },
+  { src: "/gallery/bankole-memory-book.webp", alt: "Bankole memorial book spread", title: "Bankole memory book", category: "Book design" },
+  { src: "/gallery/ndubuisi-brochure.webp", alt: "Professor Ndubuisi brochure mockup", title: "Ndubuisi tribute brochure", category: "Editorial print" },
+  { src: "/gallery/purna-rollup.webp", alt: "Purna wellness rollup banner", title: "Purna wellness rollup", category: "Large format print" },
+  { src: "/gallery/koka-van-side.webp", alt: "Koka vehicle wrap side view", title: "Koka vehicle wrap", category: "Vehicle branding" },
+  { src: "/gallery/koka-van-rear.webp", alt: "Koka vehicle wrap rear view", title: "Koka fleet rear view", category: "Vehicle branding" },
+  { src: "/gallery/koka-van-rear-side.webp", alt: "Koka vehicle wrap rear-side view", title: "Koka fleet side view", category: "Vehicle branding" },
+];
+
 export const values = [
   "Creative solutions tailored to your goals",
   "Professional, consistent delivery",

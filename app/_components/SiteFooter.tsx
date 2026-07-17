@@ -1,6 +1,7 @@
 export function SiteFooter() {
   return (
     <footer className="site-footer">
+      <div className="footer-image-fade" aria-hidden="true" />
       <div className="site-shell footer-grid">
         <div className="footer-brand">
           <img className="footer-logo" src="/bayworld-logo-night.png" alt="Bayworld Creatives" />
