@@ -16,6 +16,18 @@ export const creativeImages = [
   { src: "/mockups/creative-direction.png", alt: "Art-directed campaign materials and paper sculpture mockup", company: "Nuru Collective" },
 ];
 
+export const nurveitCampaign = [
+  { src: "/gallery/nurveit-kit-black.png", alt: "NURVEIT premium sportswear kit and accessories in black and red", title: "NURVEIT signature kit", category: "Campaign launch" },
+  { src: "/gallery/nurveit-store-black.png", alt: "NURVEIT premium sportswear retail experience in black and red", title: "NURVEIT retail experience", category: "Campaign launch" },
+  { src: "/gallery/nurveit-store-white.png", alt: "NURVEIT premium sportswear retail experience in white and red", title: "NURVEIT white collection", category: "Campaign launch" },
+  { src: "/gallery/nurveit-athlete-white.png", alt: "Athlete wearing the NURVEIT white performance collection", title: "NURVEIT athlete story", category: "Campaign launch" },
+  { src: "/gallery/nurveit-brand-white.png", alt: "NURVEIT premium sportswear logo on a white patterned background", title: "NURVEIT brand system", category: "Brand identity" },
+  { src: "/gallery/nurveit-brand-red.png", alt: "NURVEIT premium sportswear logo on a red patterned background", title: "NURVEIT campaign palette", category: "Brand identity" },
+  { src: "/gallery/nurveit-lookbook-black.png", alt: "NURVEIT sportswear lookbook with athlete and branded equipment", title: "NURVEIT product lookbook", category: "Campaign launch" },
+  { src: "/gallery/nurveit-kit-white.png", alt: "NURVEIT white sportswear kit and accessories", title: "NURVEIT white kit", category: "Campaign launch" },
+  { src: "/gallery/nurveit-athlete-black.png", alt: "Athlete wearing the NURVEIT black performance collection", title: "NURVEIT performance story", category: "Campaign launch" },
+];
+
 export const portfolioGallery = [
   { src: "/gallery/ceo-smart-flyers.webp", alt: "CEO Smart delivery flyer campaign mockup", title: "CEO Smart campaign", category: "Campaign print" },
   { src: "/gallery/shipping-cards.webp", alt: "T and T Shipping business card mockup", title: "T and T Shipping", category: "Brand identity" },

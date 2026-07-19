@@ -2,20 +2,20 @@ import { PageHero } from "../_components/PageHero";
 import { PortfolioGallery } from "../_components/PortfolioGallery";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
-import { portfolioGallery } from "../_components/site-data";
+import { nurveitCampaign, portfolioGallery } from "../_components/site-data";
 
-const campaignWork = portfolioGallery.filter((project) => [
+const campaignWork = [...nurveitCampaign, ...portfolioGallery.filter((project) => [
   "Campaign print",
   "Event campaign",
   "Outdoor advertising",
   "Vehicle branding",
   "Large format print",
-].includes(project.category));
+].includes(project.category))];
 
 export default function CampaignsPage() {
   return (
     <><SiteHeader /><main id="top">
-      <PageHero eyebrow="Campaigns" index="05" title="Make your message" accent="move people." lead="From one powerful launch to a complete campaign rollout, we create the ideas, visuals and production that keep your brand in motion." image={campaignWork[0]} tone="green" />
+      <PageHero eyebrow="Featured campaign" index="05" title="NURVEIT" accent="performance in motion." lead="A premium sportswear identity brought to life through a complete campaign system: kit, retail, athlete storytelling and branded touchpoints." image={campaignWork[0]} tone="green" />
 
       <section className="campaign-intro page-section">
         <div className="site-shell campaign-intro-grid">
@@ -24,7 +24,7 @@ export default function CampaignsPage() {
         </div>
       </section>
 
-      <PortfolioGallery items={campaignWork} eyebrow="Campaign gallery" title="Creative made for" accent="the moment." description="A selection of campaigns, activations and launch materials designed to earn attention wherever the audience meets the brand." />
+      <PortfolioGallery items={campaignWork} eyebrow="First campaign · NURVEIT" title="A complete identity" accent="built to perform." description="NURVEIT leads our campaign gallery: a premium sportswear system designed across product, retail, branded touchpoints and athlete-led storytelling." />
 
       <section className="campaign-services page-section">
         <div className="site-shell"><p className="reference-eyebrow">What we can create</p><div className="campaign-service-grid">
