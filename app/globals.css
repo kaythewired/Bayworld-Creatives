@@ -29,7 +29,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .scroll-reveal { opacity: 0; transform: translate3d(0, 42px, 0); will-change: opacity, transform; transition: opacity 680ms cubic-bezier(.22,1,.36,1) var(--reveal-delay, 0ms), transform 820ms cubic-bezier(.16,1,.3,1) var(--reveal-delay, 0ms); }
 .scroll-reveal.is-revealed { opacity: 1; transform: translate3d(0, 0, 0); }
 
-.site-shell { width: min(1440px, calc(100% - 96px)); margin: 0 auto; }
+.site-shell { width: calc(100% - 64px); margin: 0 auto; }
 .section, .page-section { padding: 124px 0; }
 .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 21px; color: var(--forest); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
 .eyebrow span { width: 23px; height: 2px; background: currentColor; }
@@ -253,7 +253,7 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 @keyframes paper-front { 0%,100% { transform: rotate(-5deg); } 50% { transform: rotate(-7deg) translate(6px,-8px); } }
 @keyframes scroll-nudge { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 @media (max-width: 900px) {
-  .site-shell { width: min(calc(100% - 48px), 860px); }
+  .site-shell { width: calc(100% - 48px); }
   .header-inner { height: 92px; gap: 18px; }
   .brand-logo { width: 248px; height: 72px; }
   .nav-links { gap: 18px; }
@@ -483,8 +483,11 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 
 .image-contact-section { background: #f7f8f5; }.image-contact-grid { align-items: stretch; }.contact-intro { display: flex; flex-direction: column; }.contact-intro-photo { height: 215px; margin: auto 0 0; overflow: hidden; box-shadow: 10px 10px 0 var(--forest-bright); }.image-contact-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; box-shadow: 13px 14px 0 var(--forest-bright); }.image-contact-card > img { display: block; height: 153px; filter: saturate(.7); }.image-contact-card-content { padding: 31px 38px 38px; }.image-contact-details { background: #dbeadc; }.page-reference-cta { padding: 78px 0; }
 
+.campaign-intro { background: #f7f8f5; }.campaign-intro-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 90px; align-items: end; }.campaign-intro h2 { margin: 0; color: var(--black); font-size: clamp(48px, 5.7vw, 84px); line-height: .84; }.campaign-intro h2 em { color: var(--forest-bright); }.campaign-intro-grid > div:last-child > p { max-width: 510px; margin: 0 0 22px; color: rgba(17,18,17,.65); font-size: 16px; line-height: 1.7; }.campaign-services { background: var(--paper); }.campaign-service-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; border-top: 1px solid rgba(17,18,17,.16); }.campaign-service-grid article { min-height: 285px; padding: 30px 36px 30px 0; border-right: 1px solid rgba(17,18,17,.16); }.campaign-service-grid article + article { padding-left: 36px; }.campaign-service-grid article:last-child { border-right: 0; }.campaign-service-grid span { color: var(--forest); font-size: 10px; font-weight: 800; letter-spacing: .14em; }.campaign-service-grid h2 { margin: 40px 0 15px; color: var(--black); font-size: clamp(30px, 3vw, 46px); line-height: .9; }.campaign-service-grid p { max-width: 310px; margin: 0; color: rgba(17,18,17,.63); font-size: 13px; line-height: 1.65; }
+
 @media (max-width: 900px) {
   .image-story-grid, .image-callout-grid { grid-template-columns: 1fr; gap: 49px; }.story-media-stack { max-width: 570px; width: 100%; }.image-values-section .values-heading { grid-template-columns: 1fr; }.image-values-side { justify-content: flex-start; }.image-work-collage-grid { grid-template-columns: 1fr 1.35fr; }.image-work-collage figure:last-child { display: none; }
+  .campaign-intro-grid { grid-template-columns: 1fr; gap: 33px; }.campaign-service-grid { grid-template-columns: 1fr; }.campaign-service-grid article, .campaign-service-grid article + article { min-height: 0; padding: 27px 0; border-right: 0; border-bottom: 1px solid rgba(17,18,17,.16); }.campaign-service-grid article:last-child { border-bottom: 0; }
 }
 
 @media (max-width: 620px) {

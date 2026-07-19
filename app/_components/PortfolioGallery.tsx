@@ -9,7 +9,21 @@ type GalleryItem = {
   category: string;
 };
 
-export function PortfolioGallery({ items }: { items: GalleryItem[] }) {
+type PortfolioGalleryProps = {
+  items: GalleryItem[];
+  eyebrow?: string;
+  title?: string;
+  accent?: string;
+  description?: string;
+};
+
+export function PortfolioGallery({
+  items,
+  eyebrow = "Selected work",
+  title = "Work made to",
+  accent = "be noticed.",
+  description = "A rotating gallery of brand identity, print production, campaigns and environmental design created by Bayworld Creatives.",
+}: PortfolioGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const total = items.length;
@@ -28,10 +42,10 @@ export function PortfolioGallery({ items }: { items: GalleryItem[] }) {
       <div className="site-shell">
         <div className="portfolio-gallery-heading">
           <div>
-            <p className="reference-eyebrow">Selected work</p>
-            <h2>Work made to<br /><em>be noticed.</em></h2>
+            <p className="reference-eyebrow">{eyebrow}</p>
+            <h2>{title}<br /><em>{accent}</em></h2>
           </div>
-          <p>A rotating gallery of brand identity, print production, campaigns and environmental design created by Bayworld Creatives.</p>
+          <p>{description}</p>
         </div>
 
         <div className="portfolio-gallery-stage">

@@ -36,7 +36,7 @@ export function SiteHeader() {
           <img className="brand-logo brand-logo-green" src="/bayworld-logo-day.png" alt="Bayworld Creatives" />
         </a>
         <nav id="site-menu" className={`nav-links${isMenuOpen ? " is-open" : ""}`} aria-label="Primary navigation">
-          <a href="/about" onClick={closeMenu}>About</a><a href="/services" onClick={closeMenu}>Services</a><a href="/work" onClick={closeMenu}>Work</a><a href="/contact" onClick={closeMenu}>Contact</a>
+          <a href="/about" onClick={closeMenu}>About</a><a href="/services" onClick={closeMenu}>Services</a><a href="/work" onClick={closeMenu}>Work</a><a href="/campaigns" onClick={closeMenu}>Campaigns</a><a href="/contact" onClick={closeMenu}>Contact</a>
           <a className="mobile-menu-cta" href="/contact" onClick={closeMenu}>Start a project <span aria-hidden="true">&rarr;</span></a>
           <button className="mobile-theme-toggle" type="button" onClick={toggleTheme}>{isNight ? "Switch to day mode" : "Switch to night mode"}</button>
         </nav>
