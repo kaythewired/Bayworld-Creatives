@@ -835,25 +835,25 @@ html[data-theme="night"] .nurvfit-statement { background: #18221b; }.nurvfit-sta
 @media (prefers-reduced-motion: reduce) { .nurvfit-motion-track, .nurvfit-orbit { animation: none; }.nurvfit-hero-art img, .nurvfit-lab-grid img { transition: none; } }
 
 /* Client showcase drawn from the company profile */
-.client-showcase { overflow: hidden; padding: 108px 0 92px; background: #084d18; color: var(--paper); }
+.client-showcase { overflow: hidden; padding: 118px 0 102px; background: #fff; color: var(--ink); }
 .client-showcase-heading { display: grid; grid-template-columns: 1.06fr .74fr; gap: 64px; align-items: end; margin-bottom: 46px; }
-.client-showcase .reference-eyebrow { color: #cfe2cf; }
-.client-showcase h2 { margin: 0; color: #fff; font-size: clamp(48px, 5.4vw, 84px); line-height: .84; }
-.client-showcase h2 em { color: #cfe2cf; }
-.client-showcase-heading > p { max-width: 410px; margin: 0 0 5px auto; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.7; }
+.client-showcase .reference-eyebrow { color: var(--forest); }
+.client-showcase h2 { margin: 0; color: var(--ink); font-size: clamp(48px, 5.4vw, 84px); line-height: .84; }
+.client-showcase h2 em { color: var(--forest); }
+.client-showcase-heading > p { max-width: 410px; margin: 0 0 5px auto; color: rgba(17,18,17,.68); font-size: 14px; line-height: 1.7; }
 .client-rails { display: grid; gap: 13px; width: 100%; }
 .client-rail { overflow: hidden; padding: 0 6px; }
-.client-track { display: flex; width: max-content; gap: 13px; animation: client-marquee 31s linear infinite; will-change: transform; }
+.client-track { display: flex; width: max-content; gap: 18px; animation: client-marquee 31s linear infinite; will-change: transform; }
 .client-rail-reverse .client-track { animation-direction: reverse; animation-duration: 35s; }
 .client-rail:hover .client-track { animation-play-state: paused; }
-.client-chip { display: grid; place-items: center; width: clamp(218px, 18vw, 300px); min-height: 112px; padding: 16px 24px; border: 1px solid rgba(207,226,207,.45); background: #fff; transition: transform .28s ease, background .28s ease, border-color .28s ease; }
-.client-chip:hover { border-color: #cfe2cf; background: #e9f1e9; transform: translateY(-5px) rotate(-1deg); }
-.client-chip img { display: block; width: 100%; max-width: 206px; height: 64px; object-fit: contain; }
+.client-chip { display: grid; place-items: center; width: clamp(280px, 23vw, 380px); min-height: 154px; padding: 22px 30px; border: 1px solid rgba(8,77,24,.22); background: #fff; box-shadow: 0 10px 26px rgba(16,33,20,.06); transition: transform .28s ease, background .28s ease, border-color .28s ease, box-shadow .28s ease; }
+.client-chip:hover { border-color: var(--forest); background: #f3f8f3; box-shadow: 0 17px 32px rgba(8,77,24,.13); transform: translateY(-6px) rotate(-1deg); }
+.client-chip img { display: block; width: 100%; max-width: 292px; height: 92px; object-fit: contain; }
 .client-showcase-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 29px; }
-.client-showcase-footer > p { margin: 0; color: rgba(255,255,255,.55); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.light-link { color: #fff; }.light-link::after { background: #cfe2cf; }.light-link:hover { color: #cfe2cf; }
+.client-showcase-footer > p { margin: 0; color: rgba(17,18,17,.55); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.light-link { color: var(--forest); }.light-link::after { background: var(--forest); }.light-link:hover { color: #0a6824; }
 @keyframes client-marquee { to { transform: translateX(-50%); } }
-@media (max-width: 700px) { .client-showcase { padding: 76px 0 62px; }.client-showcase-heading { grid-template-columns: 1fr; gap: 19px; margin-bottom: 29px; }.client-showcase-heading > p { margin-left: 0; }.client-chip { width: 210px; min-height: 92px; padding: 14px 18px; }.client-chip img { max-width: 168px; height: 52px; }.client-showcase-footer { align-items: flex-start; flex-direction: column; gap: 12px; }.client-track { animation-duration: 24s; }.client-rail-reverse .client-track { animation-duration: 27s; } }
+@media (max-width: 700px) { .client-showcase { padding: 76px 0 62px; }.client-showcase-heading { grid-template-columns: 1fr; gap: 19px; margin-bottom: 29px; }.client-showcase-heading > p { margin-left: 0; }.client-chip { width: 258px; min-height: 124px; padding: 17px 22px; }.client-chip img { max-width: 218px; height: 72px; }.client-showcase-footer { align-items: flex-start; flex-direction: column; gap: 12px; }.client-track { animation-duration: 24s; }.client-rail-reverse .client-track { animation-duration: 27s; } }
 @media (prefers-reduced-motion: reduce) { .client-track { animation: none; }.client-rail { overflow-x: auto; }.client-track { width: max-content; }.client-chip:nth-child(n+7) { display: none; } }
 
 /* Image-led Work gallery using projects from the Bayworld company profile. */
