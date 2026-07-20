@@ -17,15 +17,15 @@ export const creativeImages = [
 ];
 
 export const nurveitCampaign = [
-  { src: "/gallery/nurveit-kit-black.png", alt: "NURVEIT premium sportswear kit and accessories in black and red", title: "NURVEIT signature kit", category: "Campaign launch" },
-  { src: "/gallery/nurveit-store-black.png", alt: "NURVEIT premium sportswear retail experience in black and red", title: "NURVEIT retail experience", category: "Campaign launch" },
-  { src: "/gallery/nurveit-store-white.png", alt: "NURVEIT premium sportswear retail experience in white and red", title: "NURVEIT white collection", category: "Campaign launch" },
-  { src: "/gallery/nurveit-athlete-white.png", alt: "Athlete wearing the NURVEIT white performance collection", title: "NURVEIT athlete story", category: "Campaign launch" },
-  { src: "/gallery/nurveit-brand-white.png", alt: "NURVEIT premium sportswear logo on a white patterned background", title: "NURVEIT brand system", category: "Brand identity" },
-  { src: "/gallery/nurveit-brand-red.png", alt: "NURVEIT premium sportswear logo on a red patterned background", title: "NURVEIT campaign palette", category: "Brand identity" },
-  { src: "/gallery/nurveit-lookbook-black.png", alt: "NURVEIT sportswear lookbook with athlete and branded equipment", title: "NURVEIT product lookbook", category: "Campaign launch" },
-  { src: "/gallery/nurveit-kit-white.png", alt: "NURVEIT white sportswear kit and accessories", title: "NURVEIT white kit", category: "Campaign launch" },
-  { src: "/gallery/nurveit-athlete-black.png", alt: "Athlete wearing the NURVEIT black performance collection", title: "NURVEIT performance story", category: "Campaign launch" },
+  { src: "/gallery/nurveit-kit-black.png", alt: "NURVFIT premium sportswear kit and accessories in black and red", title: "NURVFIT signature kit", category: "Campaign launch" },
+  { src: "/gallery/nurveit-store-black.png", alt: "NURVFIT premium sportswear retail experience in black and red", title: "NURVFIT retail experience", category: "Campaign launch" },
+  { src: "/gallery/nurveit-store-white.png", alt: "NURVFIT premium sportswear retail experience in white and red", title: "NURVFIT white collection", category: "Campaign launch" },
+  { src: "/gallery/nurveit-athlete-white.png", alt: "Athlete wearing the NURVFIT white performance collection", title: "NURVFIT athlete story", category: "Campaign launch" },
+  { src: "/gallery/nurveit-brand-white.png", alt: "NURVFIT premium sportswear logo on a white patterned background", title: "NURVFIT brand system", category: "Brand identity" },
+  { src: "/gallery/nurveit-brand-red.png", alt: "NURVFIT premium sportswear logo on a red patterned background", title: "NURVFIT campaign palette", category: "Brand identity" },
+  { src: "/gallery/nurveit-lookbook-black.png", alt: "NURVFIT sportswear lookbook with athlete and branded equipment", title: "NURVFIT product lookbook", category: "Campaign launch" },
+  { src: "/gallery/nurveit-kit-white.png", alt: "NURVFIT white sportswear kit and accessories", title: "NURVFIT white kit", category: "Campaign launch" },
+  { src: "/gallery/nurveit-athlete-black.png", alt: "Athlete wearing the NURVFIT black performance collection", title: "NURVFIT performance story", category: "Campaign launch" },
 ];
 
 export const portfolioGallery = [

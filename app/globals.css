@@ -607,6 +607,69 @@ body { overflow-x: hidden; }
   .scroll-reveal { opacity: 1 !important; translate: 0 0 !important; transition: none !important; }
 }
 
+/* NURVFIT campaign case study */
+.nurvfit-concept { background: var(--paper); }
+.nurvfit-concept-grid, .nurvfit-system-grid, .nurvfit-direction-grid, .nurvfit-positioning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(42px, 7vw, 116px); align-items: start; }
+.nurvfit-concept h2, .nurvfit-system h2, .nurvfit-direction h2, .nurvfit-applications h2, .nurvfit-positioning h2 { margin: 0 0 26px; font-size: clamp(46px, 5.6vw, 84px); line-height: .86; }
+.nurvfit-concept-grid > div > p, .nurvfit-system-grid > div > p, .nurvfit-direction-grid > div > p, .nurvfit-positioning-grid > div > p { max-width: 590px; color: rgba(17, 18, 17, .72); font-size: 15px; line-height: 1.75; }
+.nurvfit-principles { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.nurvfit-principles article { display: grid; grid-template-columns: 50px minmax(130px, .72fr) 1fr; gap: 18px; align-items: baseline; padding: 23px 0; border-bottom: 1px solid var(--line); }
+.nurvfit-principles span { color: #b51c23; font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.nurvfit-principles h3 { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; letter-spacing: -.02em; }
+.nurvfit-principles p { margin: 0; color: rgba(17, 18, 17, .63); font-size: 13px; line-height: 1.5; }
+.nurvfit-system { background: #151515; color: var(--paper); }
+.nurvfit-system .reference-eyebrow { color: #f44b4b; }
+.nurvfit-system h2 { color: white; }
+.nurvfit-system h2 em { color: #ef3838; }
+.nurvfit-system-grid > div > p { color: rgba(255, 255, 255, .67); }
+.nurvfit-colours { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-top: 25px; }
+.nurvfit-colours > div { min-width: 0; }
+.nurvfit-swatch { display: block; height: 140px; margin-bottom: 13px; border: 1px solid rgba(255, 255, 255, .18); }
+.nurvfit-red { background: #bc1e26; }
+.nurvfit-black { background: #050505; }
+.nurvfit-white { background: #f6f5f2; }
+.nurvfit-colours strong { display: block; font-size: 12px; letter-spacing: .02em; }
+.nurvfit-colours p { margin: 5px 0 0; color: rgba(255, 255, 255, .58); font-size: 11px; line-height: 1.45; }
+.nurvfit-direction { background: #eeeae5; }
+.nurvfit-direction-grid { align-items: center; }
+.nurvfit-direction-art { overflow: hidden; min-height: 410px; background: #121212; }
+.nurvfit-direction-art img { width: 100%; height: 100%; min-height: 410px; object-fit: cover; }
+.nurvfit-applications { background: var(--paper); }
+.nurvfit-application-heading { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: end; margin-bottom: 50px; }
+.nurvfit-application-heading h2 { margin: 0; }
+.nurvfit-application-heading > p { max-width: 400px; margin: 0 0 4px auto; color: rgba(17, 18, 17, .68); font-size: 14px; line-height: 1.65; }
+.nurvfit-application-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.nurvfit-application-grid span { min-height: 104px; display: flex; align-items: end; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(18px, 2vw, 28px); font-weight: 700; line-height: .96; letter-spacing: -.05em; }
+.nurvfit-application-grid span:nth-child(3n) { border-right: 0; }
+.nurvfit-positioning { background: #bc1e26; color: white; }
+.nurvfit-positioning .reference-eyebrow { color: #ffe5e5; }
+.nurvfit-positioning h2 { color: white; }
+.nurvfit-positioning h2 em { color: #171717; }
+.nurvfit-positioning-grid > div > p { color: rgba(255, 255, 255, .82); }
+.nurvfit-positioning blockquote { margin: 0; padding: clamp(28px, 4vw, 56px); background: #151515; }
+.nurvfit-positioning blockquote span { color: #ef3838; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.nurvfit-positioning blockquote p { margin: 18px 0 32px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(31px, 3.3vw, 52px); font-weight: 700; line-height: .94; letter-spacing: -.06em; }
+.nurvfit-positioning blockquote footer { color: rgba(255, 255, 255, .62); font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+
+html[data-theme="night"] .nurvfit-concept, html[data-theme="night"] .nurvfit-applications, html[data-theme="night"] .nurvfit-direction { background: #18221b; color: var(--ink); }
+html[data-theme="night"] .nurvfit-concept-grid > div > p, html[data-theme="night"] .nurvfit-direction-grid > div > p, html[data-theme="night"] .nurvfit-application-heading > p { color: rgba(237, 244, 237, .72); }
+html[data-theme="night"] .nurvfit-principles, html[data-theme="night"] .nurvfit-principles article, html[data-theme="night"] .nurvfit-application-grid, html[data-theme="night"] .nurvfit-application-grid span { border-color: rgba(237, 244, 237, .18); }
+
+@media (max-width: 760px) {
+  .nurvfit-concept-grid, .nurvfit-system-grid, .nurvfit-direction-grid, .nurvfit-positioning-grid, .nurvfit-application-heading { grid-template-columns: 1fr; gap: 34px; }
+  .nurvfit-principles article { grid-template-columns: 35px 1fr; gap: 9px; }
+  .nurvfit-principles p { grid-column: 2; }
+  .nurvfit-colours { gap: 9px; }
+  .nurvfit-swatch { height: 86px; }
+  .nurvfit-colours p { font-size: 10px; }
+  .nurvfit-direction-art, .nurvfit-direction-art img { min-height: 300px; }
+  .nurvfit-application-heading > p { margin-left: 0; }
+  .nurvfit-application-grid { grid-template-columns: 1fr 1fr; }
+  .nurvfit-application-grid span { min-height: 90px; font-size: 21px; }
+  .nurvfit-application-grid span:nth-child(3n) { border-right: 1px solid var(--line); }
+  .nurvfit-application-grid span:nth-child(2n) { border-right: 0; }
+}
+
 /* Day / night switch and animated brand marks */
 html, body, .about, .work, .process, .contact-section, .reference-intro, .reference-launch, .reference-belief, .reference-work, .image-story-section, .image-process, .image-callout-section, .image-work-page, .image-work-collage, .image-contact-section, .page-hero-sand, .reference-feature-card, .reference-service-card, .image-process-card, .image-contact-details { transition: background-color .42s ease, color .42s ease, border-color .42s ease, box-shadow .42s ease; }
 .theme-toggle { position: relative; display: inline-flex; width: 48px; height: 25px; flex: 0 0 auto; align-items: center; justify-content: space-between; padding: 3px 5px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.08); color: var(--forest-soft); cursor: pointer; transition: background .28s ease, border-color .28s ease, color .28s ease, transform .28s ease; }
