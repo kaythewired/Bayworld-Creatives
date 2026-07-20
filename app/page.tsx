@@ -2,12 +2,14 @@ import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
 import { DispersingHeadline } from "./_components/DispersingHeadline";
 import { PortfolioGallery } from "./_components/PortfolioGallery";
-import { creativeImages, portfolioGallery, services } from "./_components/site-data";
+import { creativeImages, featuredClients, portfolioGallery, services } from "./_components/site-data";
 
 const featureCards = [
   { title: "Build a standout brand", text: "Clear identity systems, memorable graphic design and campaign assets that help your business look established.", image: creativeImages[3] },
   { title: "Make every print count", text: "Practical, high-quality production for the materials your audience can see, hold and keep.", image: creativeImages[1] },
 ];
+
+const clientRows = [featuredClients.slice(0, 6), featuredClients.slice(6)];
 
 export default function Home() {
   return (
@@ -24,7 +26,7 @@ export default function Home() {
               <span className="hero-sticker hero-sticker-one" aria-hidden="true">DESIGN<br />WITH ZING</span>
               <span className="hero-sticker hero-sticker-two" aria-hidden="true">✦</span>
               <DispersingHeadline />
-              <p>Bayworld Creatives brings together branding, professional design, quality printing and effective digital support for businesses ready to grow with confidence.</p>
+              <p>Built on innovation, expertise and a passion for design, Bayworld turns ambitious ideas into compelling visual experiences that help businesses grow with confidence.</p>
               <a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
@@ -32,12 +34,41 @@ export default function Home() {
 
         <PortfolioGallery items={portfolioGallery} />
 
+        <section className="client-showcase section" aria-labelledby="clients-heading">
+          <div className="site-shell client-showcase-heading">
+            <div>
+              <p className="reference-eyebrow">Trusted partnerships</p>
+              <h2 id="clients-heading">Good work travels<br />with <em>good company.</em></h2>
+            </div>
+            <p>From high-impact campaigns to production that performs in the real world, we are proud to support brands and organisations across a wide range of sectors.</p>
+          </div>
+          <div className="client-rails" aria-label="Selected Bayworld Creatives clients">
+            {clientRows.map((row, rowIndex) => (
+              <div className={`client-rail ${rowIndex === 1 ? "client-rail-reverse" : ""}`} key={`client-row-${rowIndex}`}>
+                <div className="client-track">
+                  {[...row, ...row].map((client, index) => (
+                    <div className="client-chip" key={`${client}-${index}`}>
+                      <span aria-hidden="true" />
+                      <strong>{client}</strong>
+                      <small>Bayworld client</small>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="site-shell client-showcase-footer">
+            <p>Selected from the Bayworld company profile and portfolio.</p>
+            <a className="reference-text-link light-link" href="/work">See the work <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </section>
+
         <section className="reference-intro section">
           <div className="site-shell reference-intro-grid">
             <div className="reference-intro-copy">
               <p className="reference-eyebrow">What we make</p>
               <h2>Make your business<br />look as good as<br /><em>it really is.</em></h2>
-              <p>From first ideas through to final production, we create brand experiences that feel thoughtful, professional and ready for the real world.</p>
+              <p>From graphic design and printing to flexible creative support, we bring ideas to life with the detail, quality and care they deserve.</p>
               <a className="reference-text-link" href="/about">More about Bayworld <span aria-hidden="true">&rarr;</span></a>
             </div>
             <div className="reference-feature-grid">

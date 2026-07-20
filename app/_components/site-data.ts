@@ -16,6 +16,21 @@ export const creativeImages = [
   { src: "/mockups/creative-direction.png", alt: "Art-directed campaign materials and paper sculpture mockup", company: "Nuru Collective" },
 ];
 
+export const featuredClients = [
+  "inDrive",
+  "Havana Specialist Hospital",
+  "Purna Gummies",
+  "KOKA",
+  "M-KOPA",
+  "Joy Ability Services",
+  "Quantum Power Engineering",
+  "Ninee",
+  "Triocare Services",
+  "Devilla Hutbar",
+  "Cavair Consulting",
+  "Gabbrooke Technology",
+];
+
 export const nurveitCampaign = [
   { src: "/gallery/nurveit-kit-black.png", alt: "NURVFIT premium sportswear kit and accessories in black and red", title: "NURVFIT signature kit", category: "Campaign launch" },
   { src: "/gallery/nurveit-store-black.png", alt: "NURVFIT premium sportswear retail experience in black and red", title: "NURVFIT retail experience", category: "Campaign launch" },
