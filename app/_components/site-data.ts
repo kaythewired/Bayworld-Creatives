@@ -32,6 +32,10 @@ export const featuredClients = [
 ];
 
 export const nurveitCampaign = [
+  { src: "/gallery/nurvfit-built-for-motion.png", alt: "NURVFIT athlete in the black and red premium sportswear collection", title: "Built for motion", category: "Campaign launch" },
+  { src: "/gallery/nurvfit-retail-experience.png", alt: "NURVFIT premium sportswear retail environment", title: "The NURVFIT experience", category: "Retail direction" },
+  { src: "/gallery/nurvfit-street-style.png", alt: "NURVFIT athletes in black, red and white activewear outside a branded building", title: "Performance in motion", category: "Campaign launch" },
+  { src: "/gallery/nurvfit-own-the-court.png", alt: "NURVFIT basketball athlete in the Own the Court campaign", title: "Own the court", category: "Athlete storytelling" },
   { src: "/gallery/nurveit-kit-black.png", alt: "NURVFIT premium sportswear kit and accessories in black and red", title: "NURVFIT signature kit", category: "Campaign launch" },
   { src: "/gallery/nurveit-store-black.png", alt: "NURVFIT premium sportswear retail experience in black and red", title: "NURVFIT retail experience", category: "Campaign launch" },
   { src: "/gallery/nurveit-store-white.png", alt: "NURVFIT premium sportswear retail experience in white and red", title: "NURVFIT white collection", category: "Campaign launch" },

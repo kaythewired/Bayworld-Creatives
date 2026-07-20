@@ -23,8 +23,8 @@ export default function CampaignsPage() {
               <a className="nurvfit-hero-link" href="#story">Explore the campaign <span aria-hidden="true">&darr;</span></a>
             </div>
             <div className="nurvfit-hero-art">
-              <figure className="nurvfit-hero-main"><img src="/gallery/nurveit-kit-black.png" alt="NURVFIT black and red performance kit" /></figure>
-              <figure className="nurvfit-hero-side"><img src="/gallery/nurveit-athlete-white.png" alt="NURVFIT athlete in the white performance collection" /></figure>
+              <figure className="nurvfit-hero-main"><img src="/gallery/nurvfit-built-for-motion.png" alt="NURVFIT athlete in the black and red premium sportswear collection" /></figure>
+              <figure className="nurvfit-hero-side"><img src="/gallery/nurvfit-own-the-court.png" alt="NURVFIT basketball athlete in the Own the Court campaign" /></figure>
               <span className="nurvfit-orbit nurvfit-orbit-one" aria-hidden="true" />
               <span className="nurvfit-orbit nurvfit-orbit-two" aria-hidden="true" />
             </div>
@@ -51,10 +51,10 @@ export default function CampaignsPage() {
         <div className="site-shell">
           <div className="nurvfit-lab-heading"><div><p className="reference-eyebrow">Designed as a whole</p><h2>Not just gear.<br /><em>A world in motion.</em></h2></div><p>The campaign treats every surface as an opportunity to perform. Deep red gives it energy. Black gives it force. White brings clarity to the system.</p></div>
           <div className="nurvfit-lab-grid">
-            <figure className="nurvfit-lab-a"><img src="/gallery/nurveit-store-black.png" alt="NURVFIT black retail presentation" /><figcaption>Retail energy</figcaption></figure>
+            <figure className="nurvfit-lab-a"><img src="/gallery/nurvfit-retail-experience.png" alt="NURVFIT premium sportswear retail environment" /><figcaption>Retail energy</figcaption></figure>
             <figure className="nurvfit-lab-b"><img src="/gallery/nurveit-brand-red.png" alt="NURVFIT red brand pattern" /><figcaption>Signature pattern</figcaption></figure>
-            <figure className="nurvfit-lab-c"><img src="/gallery/nurveit-lookbook-black.png" alt="NURVFIT product lookbook" /><figcaption>Product detail</figcaption></figure>
-            <figure className="nurvfit-lab-d"><img src="/gallery/nurveit-athlete-black.png" alt="NURVFIT performance athlete campaign" /><figcaption>Move with intent</figcaption></figure>
+            <figure className="nurvfit-lab-c"><img src="/gallery/nurvfit-street-style.png" alt="NURVFIT athletes in black, red and white activewear" /><figcaption>Performance, together</figcaption></figure>
+            <figure className="nurvfit-lab-d"><img src="/gallery/nurvfit-own-the-court.png" alt="NURVFIT basketball athlete in the Own the Court campaign" /><figcaption>Own the court</figcaption></figure>
           </div>
         </div>
       </section>
