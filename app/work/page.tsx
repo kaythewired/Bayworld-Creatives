@@ -1,15 +1,84 @@
 import { PageHero } from "../_components/PageHero";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
-import { creativeImages, projects } from "../_components/site-data";
+import { companyProfileGallery } from "../_components/site-data";
 
 export default function WorkPage() {
   return (
-    <><SiteHeader /><main id="top">
-      <PageHero eyebrow="Selected work" index="04" title="Work with purpose." accent="Made to stand out." lead="A look at the creative directions we bring to life across identity, print, websites and digital communication." image={creativeImages[5]} />
-      <section className="work page-work image-work-page"><div className="site-shell"><div className="work-heading"><div><p className="eyebrow"><span /> Portfolio</p><h2>Every touchpoint is<br /><em>a chance to connect.</em></h2></div><p>We build practical, memorable work around the way people will see, hold, use and remember your brand.</p></div><div className="work-page-grid image-work-grid">{projects.map((project, index) => <article className={`work-item ${project.className}`} key={project.type}><div className="project-visual image-project-visual"><img src={project.image.src} alt={project.image.alt} />{"logo" in project && <img className="project-logo" src={project.logo} alt="" aria-hidden="true" />}<span>{String(index + 1).padStart(2, "0")}</span><b>{project.company}</b></div><div><p>{project.company} / {project.label}</p><h2>{project.type}</h2><p>{project.description}</p></div></article>)}</div></div></section>
-      <section className="image-work-collage"><div className="site-shell image-work-collage-grid"><figure><img src={creativeImages[0].src} alt={creativeImages[0].alt} /></figure><div><p className="reference-eyebrow">Your project next</p><h2>Good work begins with a <em>conversation.</em></h2><p>Tell us what you want to make clearer, more memorable or more useful — and we&apos;ll help you find the visual language for it.</p><a className="reference-text-link" href="/contact">Start a conversation <span aria-hidden="true">&rarr;</span></a></div><figure><img src={creativeImages[4].src} alt={creativeImages[4].alt} /></figure></div></section>
-      <section className="reference-cta page-reference-cta"><div className="site-shell reference-cta-inner"><div><p className="reference-eyebrow">Make an impact</p><h2>Bring your idea.<br /><em>We&apos;ll bring it to life.</em></h2><p>From a single visual piece to a full brand rollout, we are ready to help you make the right impression.</p></div><div className="reference-contact-panel"><p>Get in touch to discuss a practical, memorable solution for your business.</p><a className="reference-button reference-button-dark" href="/contact">Start Your Project <span aria-hidden="true">&rarr;</span></a></div></div></section>
-    </main><SiteFooter /></>
+    <>
+      <SiteHeader />
+      <main id="top">
+        <PageHero
+          eyebrow="Selected work"
+          index="04"
+          title="Made to be seen."
+          accent="Made to be remembered."
+          lead="A living collection of identity, campaign, print and production work created for real businesses and real moments."
+          image={companyProfileGallery[2]}
+        />
+
+        <section className="profile-gallery-section" aria-labelledby="portfolio-gallery-heading">
+          <div className="site-shell">
+            <div className="profile-gallery-heading">
+              <div>
+                <p className="reference-eyebrow">From the Bayworld portfolio</p>
+                <h2 id="portfolio-gallery-heading">
+                  Work that moves
+                  <br />
+                  <em>from idea to impact.</em>
+                </h2>
+              </div>
+              <p>
+                Explore a selection of brand identities, packaging, campaigns, editorial pieces and on-the-ground applications developed by Bayworld Creatives.
+              </p>
+            </div>
+
+            <div className="profile-gallery-notes" aria-label="Portfolio categories">
+              <span>Identity</span>
+              <span>Print</span>
+              <span>Campaign</span>
+              <span>Production</span>
+              <span>Digital</span>
+            </div>
+
+            <div className="profile-gallery-grid">
+              {companyProfileGallery.map((item, index) => (
+                <figure className={`profile-gallery-card ${item.size}`} key={item.src}>
+                  <img src={item.src} alt={item.alt} />
+                  <figcaption>
+                    <span>{String(index + 1).padStart(2, "0")} / {item.category}</span>
+                    <strong>{item.title}</strong>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <div className="profile-gallery-bottom">
+              <p>Every piece is shaped to work in the places people will actually see, use and remember it.</p>
+              <a className="reference-text-link" href="/contact">
+                Start your own project <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="reference-cta page-reference-cta">
+          <div className="site-shell reference-cta-inner">
+            <div>
+              <p className="reference-eyebrow">Make an impact</p>
+              <h2>Bring your idea.<br /><em>We&apos;ll bring it to life.</em></h2>
+              <p>From a single visual piece to a full brand rollout, we are ready to help you make the right impression.</p>
+            </div>
+            <div className="reference-contact-panel">
+              <p>Get in touch to discuss a practical, memorable solution for your business.</p>
+              <a className="reference-button reference-button-dark" href="/contact">
+                Start Your Project <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

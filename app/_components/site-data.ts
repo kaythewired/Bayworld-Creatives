@@ -70,6 +70,27 @@ export const portfolioGallery = [
   { src: "/gallery/koka-van-rear-side.webp", alt: "Koka vehicle wrap rear-side view", title: "Koka fleet side view", category: "Vehicle branding" },
 ];
 
+export const companyProfileGallery = [
+  { src: "/profile-gallery/lagos-brand-card.png", alt: "Lagos SMEs branded business card on a laptop", title: "Lagos SMEs", category: "Brand identity", size: "gallery-tall" },
+  { src: "/profile-gallery/lagos-merch.jpg", alt: "Lagos SMEs branded merchandise and business cards", title: "Lagos SMEs rollout", category: "Merchandise", size: "gallery-wide" },
+  { src: "/profile-gallery/ndubuisi-editorial.png", alt: "Professor Ndubuisi editorial and memorial print collection", title: "Ndubuisi collection", category: "Editorial print", size: "gallery-wide" },
+  { src: "/profile-gallery/seasonal-packaging.png", alt: "Seasonal gift packaging and tag design", title: "Seasonal gifting", category: "Packaging", size: "gallery-square" },
+  { src: "/profile-gallery/city-rollup.png", alt: "City agents rollup banner design", title: "City agents", category: "Large format", size: "gallery-portrait" },
+  { src: "/profile-gallery/city-billboard.png", alt: "City agents billboard design", title: "City agents billboard", category: "Outdoor", size: "gallery-wide" },
+  { src: "/profile-gallery/shipping-cards.png", alt: "Shipping brand business cards on a plate", title: "T and T Shipping", category: "Brand identity", size: "gallery-square" },
+  { src: "/profile-gallery/glam-ma-notebook.png", alt: "Glam-ma event notebook cover", title: "Glam-ma at 80", category: "Event print", size: "gallery-square" },
+  { src: "/profile-gallery/porbeni-notebook.png", alt: "Porbeni memorial notebook and pen", title: "Porbeni memorial book", category: "Print production", size: "gallery-square" },
+  { src: "/profile-gallery/joy-ability-brochure.png", alt: "Joy Ability tri-fold brochure collection", title: "Joy Ability", category: "Brochure design", size: "gallery-wide" },
+  { src: "/profile-gallery/admaks-event.png", alt: "Admaks event campaign flyer set", title: "Admaks event campaign", category: "Campaign print", size: "gallery-tall" },
+  { src: "/profile-gallery/havana-mousepad.png", alt: "Havana Specialist Hospital branded mousepad", title: "Havana specialist care", category: "Branded merchandise", size: "gallery-wide" },
+  { src: "/profile-gallery/de-trevines-bag.png", alt: "De Trevines premium shopping bag", title: "De Trevines", category: "Packaging", size: "gallery-square" },
+  { src: "/profile-gallery/bankole-booklet.png", alt: "Bankole celebration booklet mockup", title: "Bankole celebration book", category: "Book design", size: "gallery-wide" },
+  { src: "/profile-gallery/koka-van.png", alt: "KOKA branded vehicle wrap", title: "KOKA fleet branding", category: "Vehicle branding", size: "gallery-wide" },
+  { src: "/profile-gallery/purna-rollup.png", alt: "Purna wellness rollup display", title: "Purna wellness", category: "Large format", size: "gallery-portrait" },
+  { src: "/profile-gallery/pharmacist-notebook.png", alt: "Pharmacist branded notebook cover", title: "Pharmacist notebook", category: "Stationery", size: "gallery-square" },
+  { src: "/profile-gallery/hbi-cap.png", alt: "HBI branded cap", title: "HBI apparel", category: "Merchandise", size: "gallery-square" },
+];
+
 export const values = [
   "Creative solutions tailored to your goals",
   "Professional, consistent delivery",
