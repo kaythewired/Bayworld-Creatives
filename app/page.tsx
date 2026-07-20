@@ -46,11 +46,9 @@ export default function Home() {
             {clientRows.map((row, rowIndex) => (
               <div className={`client-rail ${rowIndex === 1 ? "client-rail-reverse" : ""}`} key={`client-row-${rowIndex}`}>
                 <div className="client-track">
-                  {[...row, ...row].map((client, index) => (
-                    <div className="client-chip" key={`${client}-${index}`}>
-                      <span aria-hidden="true" />
-                      <strong>{client}</strong>
-                      <small>Bayworld client</small>
+          {[...row, ...row].map((client, index) => (
+                    <div className="client-chip" key={`${client.name}-${index}`}>
+                      <img src={client.logo} alt={`${client.name} logo`} />
                     </div>
                   ))}
                 </div>

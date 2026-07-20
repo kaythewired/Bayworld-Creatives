@@ -17,18 +17,18 @@ export const creativeImages = [
 ];
 
 export const featuredClients = [
-  "inDrive",
-  "Havana Specialist Hospital",
-  "Purna Gummies",
-  "KOKA",
-  "M-KOPA",
-  "Joy Ability Services",
-  "Quantum Power Engineering",
-  "Ninee",
-  "Triocare Services",
-  "Devilla Hutbar",
-  "Cavair Consulting",
-  "Gabbrooke Technology",
+  { name: "inDrive", logo: "/client-logos/indrive.png" },
+  { name: "Havana Specialist Hospital", logo: "/client-logos/havana.png" },
+  { name: "Purna Gummies", logo: "/client-logos/purna.png" },
+  { name: "KOKA", logo: "/client-logos/koka.png" },
+  { name: "M-KOPA", logo: "/client-logos/mkopa.png" },
+  { name: "Joy Ability Services", logo: "/client-logos/joy-ability.png" },
+  { name: "Quantum Power Engineering", logo: "/client-logos/quantum-power.png" },
+  { name: "Ninee", logo: "/client-logos/ninee.png" },
+  { name: "Triocare Services", logo: "/client-logos/triocare.png" },
+  { name: "Devilla Hutbar", logo: "/client-logos/devilla.png" },
+  { name: "Cavair Consulting", logo: "/client-logos/cavair.png" },
+  { name: "Gabbrooke Technology", logo: "/client-logos/gabbrooke.png" },
 ];
 
 export const nurveitCampaign = [
