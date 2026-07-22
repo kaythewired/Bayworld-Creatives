@@ -17,18 +17,18 @@ export const creativeImages = [
 ];
 
 export const featuredClients = [
-  { name: "inDrive", logo: "/client-logos/indrive.png" },
-  { name: "Havana Specialist Hospital", logo: "/client-logos/havana.png" },
-  { name: "Purna Gummies", logo: "/client-logos/purna.png" },
-  { name: "KOKA", logo: "/client-logos/koka.png" },
-  { name: "M-KOPA", logo: "/client-logos/mkopa.png" },
-  { name: "Joy Ability Services", logo: "/client-logos/joy-ability.png" },
-  { name: "Quantum Power Engineering", logo: "/client-logos/quantum-power.png" },
-  { name: "Ninee", logo: "/client-logos/ninee.png" },
-  { name: "Triocare Services", logo: "/client-logos/triocare.png" },
-  { name: "Devilla Hutbar", logo: "/client-logos/devilla.png" },
-  { name: "Cavair Consulting", logo: "/client-logos/cavair.png" },
-  { name: "Gabbrooke Technology", logo: "/client-logos/gabbrooke.png" },
+  { name: "inDrive", logo: "/client-logos/indrive.png", crop: { canvasWidth: 480, canvasHeight: 480, left: 12, top: 176, width: 456, height: 128 } },
+  { name: "Havana Specialist Hospital", logo: "/client-logos/havana.png", crop: { canvasWidth: 320, canvasHeight: 320, left: 44, top: 44, width: 236, height: 246 } },
+  { name: "Purna Gummies", logo: "/client-logos/purna.png", crop: { canvasWidth: 720, canvasHeight: 297, left: 3, top: 3, width: 714, height: 291 } },
+  { name: "KOKA", logo: "/client-logos/koka.png", crop: { canvasWidth: 380, canvasHeight: 99, left: 0, top: 0, width: 380, height: 99 } },
+  { name: "M-KOPA", logo: "/client-logos/mkopa.png", crop: { canvasWidth: 800, canvasHeight: 800, left: 81, top: 324, width: 638, height: 157 } },
+  { name: "Joy Ability Services", logo: "/client-logos/joy-ability.png", crop: { canvasWidth: 242, canvasHeight: 234, left: 26, top: 33, width: 180, height: 182 } },
+  { name: "Quantum Power Engineering", logo: "/client-logos/quantum-power.png", crop: { canvasWidth: 480, canvasHeight: 86, left: 0, top: 0, width: 479, height: 78 } },
+  { name: "Ninee", logo: "/client-logos/ninee.png", crop: { canvasWidth: 320, canvasHeight: 240, left: 46, top: 15, width: 216, height: 222 } },
+  { name: "Triocare Services", logo: "/client-logos/triocare.png", crop: { canvasWidth: 640, canvasHeight: 640, left: 121, top: 232, width: 379, height: 237 } },
+  { name: "Devilla Hutbar", logo: "/client-logos/devilla.png", crop: { canvasWidth: 397, canvasHeight: 249, left: 31, top: 26, width: 348, height: 187 } },
+  { name: "Cavair Consulting", logo: "/client-logos/cavair.png", crop: { canvasWidth: 480, canvasHeight: 360, left: 50, top: 112, width: 376, height: 131 } },
+  { name: "Gabbrooke Technology", logo: "/client-logos/gabbrooke.png", crop: { canvasWidth: 560, canvasHeight: 560, left: 104, top: 166, width: 289, height: 158 } },
 ];
 
 export const nurveitCampaign = [

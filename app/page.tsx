@@ -10,6 +10,27 @@ const featureCards = [
 ];
 
 const clientRows = [featuredClients.slice(0, 6), featuredClients.slice(6)];
+const clientLogoHeight = 124;
+
+function ClientLogo({ client }: { client: (typeof featuredClients)[number] }) {
+  const { canvasWidth, canvasHeight, left, top, width, height } = client.crop;
+  const scale = clientLogoHeight / height;
+
+  return (
+    <span className="client-logo-crop" style={{ width: `${Math.round(width * scale)}px`, height: `${clientLogoHeight}px` }}>
+      <img
+        src={client.logo}
+        alt={`${client.name} logo`}
+        style={{
+          width: `${Math.round(canvasWidth * scale)}px`,
+          height: `${Math.round(canvasHeight * scale)}px`,
+          left: `${Math.round(-left * scale)}px`,
+          top: `${Math.round(-top * scale)}px`,
+        }}
+      />
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -48,7 +69,7 @@ export default function Home() {
                 <div className="client-track">
           {[...row, ...row].map((client, index) => (
                     <div className="client-chip" key={`${client.name}-${index}`}>
-                      <img src={client.logo} alt={`${client.name} logo`} />
+                      <ClientLogo client={client} />
                     </div>
                   ))}
                 </div>
