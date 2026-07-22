@@ -843,10 +843,10 @@ html[data-theme="night"] .nurvfit-statement { background: #18221b; }.nurvfit-sta
 .client-showcase-heading > p { max-width: 410px; margin: 0 0 5px auto; color: rgba(17,18,17,.68); font-size: 14px; line-height: 1.7; }
 .client-rails { display: grid; gap: 24px; width: 100%; }
 .client-rail { overflow: hidden; padding: 0; }
-.client-track { display: flex; width: max-content; gap: clamp(32px, 3.5vw, 60px); animation: client-marquee 31s linear infinite; will-change: transform; }
+.client-track { display: flex; width: max-content; gap: 0; animation: client-marquee 31s linear infinite; will-change: transform; }
 .client-rail-reverse .client-track { animation-direction: reverse; animation-duration: 35s; }
 .client-rail:hover .client-track { animation-play-state: paused; }
-.client-chip { display: grid; place-items: center; width: clamp(420px, 34vw, 600px); min-height: 190px; padding: 10px; border: 0; background: transparent; box-shadow: none; transition: transform .28s ease, opacity .28s ease; }
+.client-chip { display: grid; place-items: center; flex: 0 0 clamp(390px, 30vw, 460px); width: clamp(390px, 30vw, 460px); height: 190px; min-height: 190px; margin-right: 32px; padding: 0; border: 0; background: transparent; box-shadow: none; transition: transform .28s ease, opacity .28s ease; }
 .client-chip:hover { background: transparent; box-shadow: none; transform: translateY(-5px) scale(1.025); }
 .client-logo-crop { position: relative; display: block; overflow: hidden; max-width: 100%; }
 .client-logo-crop img { position: absolute; display: block; max-width: none; object-fit: initial; }
@@ -854,7 +854,7 @@ html[data-theme="night"] .nurvfit-statement { background: #18221b; }.nurvfit-sta
 .client-showcase-footer > p { margin: 0; color: rgba(17,18,17,.55); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .light-link { color: var(--forest); }.light-link::after { background: var(--forest); }.light-link:hover { color: #0a6824; }
 @keyframes client-marquee { to { transform: translateX(-50%); } }
-@media (max-width: 700px) { .client-showcase { padding: 76px 0 62px; }.client-showcase-heading { grid-template-columns: 1fr; gap: 19px; margin-bottom: 29px; }.client-showcase-heading > p { margin-left: 0; }.client-chip { width: 420px; min-height: 130px; padding: 7px 0; }.client-logo-crop { transform: scale(.72); transform-origin: center; }.client-showcase-footer { align-items: flex-start; flex-direction: column; gap: 12px; }.client-track { gap: 28px; animation-duration: 24s; }.client-rail-reverse .client-track { animation-duration: 27s; } }
+@media (max-width: 700px) { .client-showcase { padding: 76px 0 62px; }.client-showcase-heading { grid-template-columns: 1fr; gap: 19px; margin-bottom: 29px; }.client-showcase-heading > p { margin-left: 0; }.client-chip { flex-basis: 360px; width: 360px; height: 150px; min-height: 150px; margin-right: 22px; padding: 7px 0; }.client-logo-crop { transform: scale(.72); transform-origin: center; }.client-showcase-footer { align-items: flex-start; flex-direction: column; gap: 12px; }.client-track { animation-duration: 24s; }.client-rail-reverse .client-track { animation-duration: 27s; } }
 @media (prefers-reduced-motion: reduce) { .client-track { animation: none; }.client-rail { overflow-x: auto; }.client-track { width: max-content; }.client-chip:nth-child(n+7) { display: none; } }
 
 /* Image-led Work gallery using projects from the Bayworld company profile. */
