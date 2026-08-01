@@ -1,17 +1,11 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
-import { DispersingHeadline } from "./_components/DispersingHeadline";
-import { PortfolioGallery } from "./_components/PortfolioGallery";
-import { creativeImages, featuredClients, portfolioGallery, services } from "./_components/site-data";
+import { featuredClients, portfolioGallery, process, services } from "./_components/site-data";
 
-const featureCards = [
-  { title: "Build a standout brand", text: "Clear identity systems, memorable graphic design and campaign assets that help your business look established.", image: creativeImages[3] },
-  { title: "Make every print count", text: "Practical, high-quality production for the materials your audience can see, hold and keep.", image: creativeImages[1] },
-];
-
-const clientRows = [featuredClients.slice(0, 6), featuredClients.slice(6)];
-const clientLogoWidth = 360;
-const clientLogoHeight = 124;
+const work = [portfolioGallery[8], portfolioGallery[21], portfolioGallery[0], portfolioGallery[10], portfolioGallery[5]];
+const selectedServices = [services[0], services[1], services[2], services[4]];
+const clientLogoWidth = 230;
+const clientLogoHeight = 88;
 
 function ClientLogo({ client }: { client: (typeof featuredClients)[number] }) {
   const { canvasWidth, canvasHeight, left, top, width, height } = client.crop;
@@ -20,15 +14,15 @@ function ClientLogo({ client }: { client: (typeof featuredClients)[number] }) {
   const visibleHeight = height * scale;
 
   return (
-    <span className="client-logo-crop" style={{ width: `${clientLogoWidth}px`, height: `${clientLogoHeight}px` }}>
+    <span className="landing-client-logo" style={{ width: clientLogoWidth, height: clientLogoHeight }}>
       <img
         src={client.logo}
         alt={`${client.name} logo`}
         style={{
-          width: `${Math.round(canvasWidth * scale)}px`,
-          height: `${Math.round(canvasHeight * scale)}px`,
-          left: `${Math.round((clientLogoWidth - visibleWidth) / 2 - left * scale)}px`,
-          top: `${Math.round((clientLogoHeight - visibleHeight) / 2 - top * scale)}px`,
+          width: Math.round(canvasWidth * scale),
+          height: Math.round(canvasHeight * scale),
+          left: Math.round((clientLogoWidth - visibleWidth) / 2 - left * scale),
+          top: Math.round((clientLogoHeight - visibleHeight) / 2 - top * scale),
         }}
       />
     </span>
@@ -39,123 +33,70 @@ export default function Home() {
   return (
     <>
       <SiteHeader />
-      <main id="top">
-        <section className="reference-hero">
-          <div className="reference-hero-grid" aria-hidden="true" />
-          <div className="site-shell reference-hero-inner">
-            <p className="reference-kicker">Lagos creative studio <span>BC / 01</span></p>
-            <div className="reference-hero-copy">
-              <span className="green-orb orb-left" aria-hidden="true" />
-              <span className="green-orb orb-right" aria-hidden="true" />
-              <span className="hero-sticker hero-sticker-one" aria-hidden="true">DESIGN<br />WITH ZING</span>
-              <span className="hero-sticker hero-sticker-two" aria-hidden="true">✦</span>
-              <DispersingHeadline />
-              <p>Built on innovation, expertise and a passion for design, Bayworld turns ambitious ideas into compelling visual experiences that help businesses grow with confidence.</p>
-              <a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </div>
-        </section>
-
-        <PortfolioGallery items={portfolioGallery} />
-
-        <section className="client-showcase section" aria-labelledby="clients-heading">
-          <div className="site-shell client-showcase-heading">
-            <div>
-              <p className="reference-eyebrow">Trusted partnerships</p>
-              <h2 id="clients-heading">Good work travels<br />with <em>good company.</em></h2>
-            </div>
-            <p>From high-impact campaigns to production that performs in the real world, we are proud to support brands and organisations across a wide range of sectors.</p>
-          </div>
-          <div className="client-rails" aria-label="Selected Bayworld Creatives clients">
-            {clientRows.map((row, rowIndex) => (
-              <div className={`client-rail ${rowIndex === 1 ? "client-rail-reverse" : ""}`} key={`client-row-${rowIndex}`}>
-                <div className="client-track">
-          {[...row, ...row].map((client, index) => (
-                    <div className="client-chip" key={`${client.name}-${index}`}>
-                      <ClientLogo client={client} />
-                    </div>
-                  ))}
-                </div>
+      <main id="top" className="bayworld-home">
+        <section className="bw-hero">
+          <div className="bw-hero-grid" aria-hidden="true" />
+          <div className="site-shell bw-hero-shell">
+            <p className="bw-index"><span>Bayworld Creatives</span><span> Lagos, Nigeria / 01</span></p>
+            <div className="bw-hero-layout">
+              <div className="bw-hero-copy">
+                <p className="bw-eyebrow">Creative agency for brands on the move</p>
+                <h1>Make your<br /><em>next move</em><br />matter.</h1>
+                <p className="bw-hero-intro">Bayworld brings brand identity, print production and digital thinking together to create a presence people can recognise and remember.</p>
+                <div className="bw-hero-actions"><a href="/contact">Start a project <span aria-hidden="true">↗</span></a><a className="bw-ghost-link" href="/work">See our work <span aria-hidden="true">↓</span></a></div>
               </div>
-            ))}
-          </div>
-          <div className="site-shell client-showcase-footer">
-            <p>Selected from the Bayworld company profile and portfolio.</p>
-            <a className="reference-text-link light-link" href="/work">See the work <span aria-hidden="true">&rarr;</span></a>
+              <div className="bw-hero-collage" aria-label="A selection of Bayworld creative work">
+                <figure className="bw-hero-feature"><img src={portfolioGallery[8].src} alt={portfolioGallery[8].alt} /><figcaption><span>Campaign + activation</span><b>Heroes of inDrive</b></figcaption></figure>
+                <figure className="bw-hero-card bw-hero-card-a"><img src={portfolioGallery[1].src} alt={portfolioGallery[1].alt} /></figure>
+                <figure className="bw-hero-card bw-hero-card-b"><img src={portfolioGallery[20].src} alt={portfolioGallery[20].alt} /></figure>
+                <span className="bw-shape bw-shape-a" aria-hidden="true" />
+                <span className="bw-shape bw-shape-b" aria-hidden="true" />
+              </div>
+            </div>
+            <div className="bw-hero-footer"><span>Built to be seen.</span><span>Designed to connect.</span><a href="/services">Explore our capabilities <b aria-hidden="true">→</b></a></div>
           </div>
         </section>
 
-        <section className="reference-intro section">
-          <div className="site-shell reference-intro-grid">
-            <div className="reference-intro-copy">
-              <p className="reference-eyebrow">What we make</p>
-              <h2>Make your business<br />look as good as<br /><em>it really is.</em></h2>
-              <p>From graphic design and printing to flexible creative support, we bring ideas to life with the detail, quality and care they deserve.</p>
-              <a className="reference-text-link" href="/about">More about Bayworld <span aria-hidden="true">&rarr;</span></a>
-            </div>
-            <div className="reference-feature-grid">
-              {featureCards.map((card) => <article className="reference-feature-card" key={card.title}>
-                <img src={card.image.src} alt={card.image.alt} />
-                <div><h3>{card.title}</h3><p>{card.text}</p><a href="/services" aria-label={`Explore ${card.title}`}>Explore <span aria-hidden="true">&rarr;</span></a></div>
-              </article>)}
-            </div>
+        <section className="bw-intro section">
+          <div className="site-shell bw-intro-grid">
+            <p className="bw-index dark"><span>01</span><span>Our point of view</span></p>
+            <div><h2>Ideas deserve more than a good <em>first impression.</em></h2></div>
+            <div className="bw-intro-note"><p>We help ambitious businesses look sharper, communicate clearly and show up consistently across every place their audience finds them.</p><a className="bw-text-link" href="/about">Meet Bayworld <span aria-hidden="true">→</span></a></div>
           </div>
         </section>
 
-        <section className="reference-launch section">
+        <section className="bw-work section" id="featured-work">
           <div className="site-shell">
-            <div className="reference-section-title"><span className="green-orb" aria-hidden="true" /><h2>Everything you need<br />to launch your <em>next move.</em></h2></div>
-            <div className="reference-service-grid">
-              {services.map((service, index) => <a href="/services" className={`reference-service-card service-tone-${index + 1}`} key={service.number}>
-                <div className="service-card-image"><img src={creativeImages[index % creativeImages.length].src} alt="" /></div>
-                <div><p>{service.number}</p><h3>{service.title}</h3><span aria-hidden="true">&rarr;</span></div>
-              </a>)}
+            <div className="bw-section-heading"><div><p className="bw-eyebrow">Selected work</p><h2>Work that earns<br />a <em>second look.</em></h2></div><a className="bw-text-link" href="/work">View the full gallery <span aria-hidden="true">→</span></a></div>
+            <div className="bw-work-grid">
+              {work.map((item, index) => <a className={`bw-work-card bw-work-card-${index + 1}`} href="/work" key={item.title}><img src={item.src} alt={item.alt} /><span>{item.category}</span><strong>{item.title}</strong><i aria-hidden="true">↗</i></a>)}
             </div>
           </div>
         </section>
 
-        <section className="reference-belief section">
-          <div className="site-shell reference-belief-grid">
-            <div className="reference-belief-copy">
-              <p className="reference-eyebrow">How we work</p>
-              <h2>We listen closely, create with purpose and make sure your brand feels right <em>where it matters.</em></h2>
-              <p>Our work is shaped around your goals, your audience and the everyday places people meet your business — online, in print and in person.</p>
-              <a className="reference-text-link" href="/about">Our process <span aria-hidden="true">&rarr;</span></a>
-            </div>
-            <div className="reference-belief-visual"><span className="visual-frame" aria-hidden="true" /><img src={creativeImages[2].src} alt="Responsive website experience mockup" /></div>
-          </div>
-          <div className="site-shell reference-stats">
-            <div><strong>01</strong><span>creative partner for your brand</span></div>
-            <div><strong>06</strong><span>connected service areas</span></div>
-            <div><strong>360°</strong><span>support from idea to delivery</span></div>
-          </div>
-        </section>
-
-        <section className="reference-dark-services section">
+        <section className="bw-services section">
           <div className="site-shell">
-            <div className="reference-section-title light"><span className="green-orb" aria-hidden="true" /><h2>Practical creative<br />support for your <em>business.</em></h2></div>
-            <div className="reference-dark-grid">
-              {services.slice(0, 3).map((service, index) => <article className={`reference-dark-card dark-card-${index + 1}`} key={service.number}>
-                <div><p>{service.number} / BAYWORLD SERVICE</p><h3>{service.title}</h3><p>{service.description}</p><a className="reference-button" href="/contact">Get a Quote <span aria-hidden="true">&rarr;</span></a></div>
-                <img src={creativeImages[(index + 1) % creativeImages.length].src} alt="" />
-              </article>)}
+            <div className="bw-section-heading bw-light-heading"><div><p className="bw-eyebrow">How we help</p><h2>One studio.<br /><em>Many ways</em> forward.</h2></div><p>From the first spark to the finished product, our connected services give your brand one clear direction.</p></div>
+            <div className="bw-service-list">
+              {selectedServices.map((service, index) => <a href="/services" className="bw-service-row" key={service.number}><span>{String(index + 1).padStart(2, "0")}</span><h3>{service.title}</h3><p>{service.description}</p><b aria-hidden="true">↗</b></a>)}
             </div>
           </div>
         </section>
 
-        <section className="reference-work section">
-          <div className="site-shell reference-work-grid">
-            <div><p className="reference-eyebrow">Creative work that delivers</p><h2>A stronger presence<br />starts with a clear <em>direction.</em></h2><p>Explore the branding, print and digital work we shape for businesses that are ready to be seen.</p><a className="reference-text-link" href="/work">View Our Work <span aria-hidden="true">&rarr;</span></a></div>
-            <div className="reference-work-stack"><figure><img src={creativeImages[0].src} alt="Brand identity stationery mockup" /></figure><figure><img src={creativeImages[4].src} alt="Signage and branded merchandise mockup" /></figure></div>
-          </div>
+        <section className="bw-spotlight">
+          <figure><img src={portfolioGallery[21].src} alt={portfolioGallery[21].alt} /></figure>
+          <div className="site-shell bw-spotlight-copy"><p className="bw-eyebrow">Brand systems in motion</p><h2>Identity should work<br />everywhere <em>you do.</em></h2><p>From a business card in a hand to a branded vehicle on the road, we build connected creative systems that hold their own in the real world.</p><a href="/campaigns">Explore campaigns <span aria-hidden="true">↗</span></a></div>
         </section>
 
-        <section className="reference-cta">
-          <div className="site-shell reference-cta-inner">
-            <div><p className="reference-eyebrow">Start a project</p><h2>Share your idea.<br /><em>Let&apos;s build it.</em></h2><p>Tell us what you are working toward and we will help you turn it into a brand experience that works.</p></div>
-            <div className="reference-contact-panel"><p>Branding, printing, websites or ongoing support — it starts with a conversation.</p><a className="reference-button reference-button-dark" href="/contact">Start Your Project <span aria-hidden="true">&rarr;</span></a></div>
-          </div>
+        <section className="bw-process section">
+          <div className="site-shell"><div className="bw-process-heading"><p className="bw-eyebrow">A clear way forward</p><h2>Good creative<br />starts with <em>listening.</em></h2></div><div className="bw-process-list">{process.map((item) => <article key={item.step}><span>{item.step}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></div>
         </section>
+
+        <section className="bw-clients section">
+          <div className="site-shell"><div className="bw-client-heading"><div><p className="bw-eyebrow">Good company</p><h2>Trusted by people<br />building <em>what&apos;s next.</em></h2></div><p>We are proud to support an eclectic mix of businesses and organisations with ideas worth taking further.</p></div><div className="bw-client-grid">{featuredClients.map((client) => <div className="bw-client-slot" key={client.name}><ClientLogo client={client} /></div>)}</div></div>
+        </section>
+
+        <section className="bw-close"><div className="site-shell bw-close-inner"><p className="bw-eyebrow">Let&apos;s make it happen</p><h2>Bring us the<br /><em>big idea.</em></h2><p>Tell us what you are building. We&apos;ll help you make it impossible to ignore.</p><a href="/contact">Start your project <span aria-hidden="true">↗</span></a></div></section>
       </main>
       <SiteFooter />
     </>
