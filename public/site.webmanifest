@@ -1,0 +1,16 @@
+{
+  "name": "Bayworld Creatives",
+  "short_name": "Bayworld",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b4a16",
+  "icons": [
+    {
+      "src": "/bayworld-transparent-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

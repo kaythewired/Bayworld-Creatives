@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { PortfolioGallery } from "../_components/PortfolioGallery";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
 import { nurveitCampaign } from "../_components/site-data";
+
+export const metadata: Metadata = {
+  title: "Campaigns | NURVFIT Brand Identity",
+  description: "Discover Bayworld Creatives' NURVFIT premium sportswear identity and campaign direction, built for motion and designed for impact.",
+  alternates: { canonical: "/campaigns" },
+};
 
 const applications = [
   "Performance kits", "Training layers", "Teamwear", "Footwear", "Accessories",
@@ -65,7 +72,7 @@ export default function CampaignsPage() {
 
       <section className="nurvfit-applications page-section"><div className="site-shell"><p className="reference-eyebrow">The complete system</p><div className="nurvfit-application-heading"><h2>Built to live<br /><em>everywhere.</em></h2><p>One flexible identity, designed to make an impact on physical products, retail moments and digital campaigns.</p></div><div className="nurvfit-application-grid">{applications.map((application, index) => <span key={application}><small>{String(index + 1).padStart(2, "0")}</small>{application}</span>)}</div></div></section>
 
-      <section className="nurvfit-positioning page-section"><div className="site-shell nurvfit-positioning-grid"><div><p className="reference-eyebrow">The NURVFIT mindset</p><h2>Strength begins<br /><em>within.</em></h2><p>For athletes, fitness enthusiasts and ambitious people who value performance, quality and confident design.</p></div><blockquote><span>Core message</span><p>"Strength begins within. Performance makes it visible."</p><footer>Brand descriptor / Premium Sportswear</footer></blockquote></div></section>
+      <section className="nurvfit-positioning page-section"><div className="site-shell nurvfit-positioning-grid"><div><p className="reference-eyebrow">The NURVFIT mindset</p><h2>Strength begins<br /><em>within.</em></h2><p>For athletes, fitness enthusiasts and ambitious people who value performance, quality and confident design.</p></div><blockquote><span>Core message</span><p>&ldquo;Strength begins within. Performance makes it visible.&rdquo;</p><footer>Brand descriptor / Premium Sportswear</footer></blockquote></div></section>
 
       <section className="reference-cta page-reference-cta"><div className="site-shell reference-cta-inner"><div><p className="reference-eyebrow">The result</p><h2>Ready to<br /><em>perform.</em></h2><p>A cohesive sportswear identity built to move from first impression to everyday action.</p></div><div className="reference-contact-panel"><p>Have a brand that needs a full world of its own? Let&apos;s turn it into something people can feel.</p><a className="reference-button reference-button-dark" href="/contact">Start Your Campaign <span aria-hidden="true">&rarr;</span></a></div></div></section>
     </main><SiteFooter /></>

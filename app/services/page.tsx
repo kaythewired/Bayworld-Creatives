@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { PageHero } from "../_components/PageHero";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
 import { creativeImages, services } from "../_components/site-data";
+
+export const metadata: Metadata = {
+  title: "Branding, Print, Web & Digital Marketing Services",
+  description: "Explore Bayworld Creatives' branding, graphic design, printing, web development, social media and digital marketing services in Lagos, Nigeria.",
+  alternates: { canonical: "/services" },
+};
 
 export default function ServicesPage() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 type CarouselImage = { src: string; alt: string; company: string; logo?: string };
 
@@ -9,13 +9,16 @@ export function MockupCarousel({ images }: { images: CarouselImage[] }) {
   const [isPaused, setIsPaused] = useState(false);
   const total = images.length;
 
-  const moveTo = (index: number) => setActiveIndex((index + total) % total);
+  const moveTo = useCallback(
+    (index: number) => setActiveIndex((index + total) % total),
+    [total],
+  );
 
   useEffect(() => {
     if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(() => moveTo(activeIndex + 1), 4200);
     return () => window.clearInterval(timer);
-  }, [activeIndex, isPaused, total]);
+  }, [activeIndex, isPaused, moveTo]);
 
   return (
     <section className="mockup-carousel site-shell" aria-roledescription="carousel" aria-label="Bayworld creative mockups" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)} onFocus={() => setIsPaused(true)} onBlur={() => setIsPaused(false)}>

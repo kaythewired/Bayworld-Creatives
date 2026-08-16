@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { PageHero } from "../_components/PageHero";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
 import { companyProfileGallery } from "../_components/site-data";
+
+export const metadata: Metadata = {
+  title: "Creative Portfolio & Selected Work",
+  description: "See selected Bayworld Creatives work across brand identity, print production, campaigns and visual communication.",
+  alternates: { canonical: "/work" },
+};
 
 export default function WorkPage() {
   return (

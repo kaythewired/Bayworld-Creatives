@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { PageHero } from "../_components/PageHero";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
 import { creativeImages, process, values } from "../_components/site-data";
+
+export const metadata: Metadata = {
+  title: "About Our Lagos Creative Agency",
+  description: "Learn how Bayworld Creatives brings strategy, design, print and digital execution together for ambitious businesses in Lagos and across Nigeria.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return (

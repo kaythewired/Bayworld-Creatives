@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export function SiteHeader() {
@@ -10,6 +11,8 @@ export function SiteHeader() {
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("bayworld-theme");
     const night = savedTheme === "night";
+    // Apply the visitor's saved preference after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsNight(night);
     document.documentElement.dataset.theme = night ? "night" : "day";
 
@@ -31,13 +34,13 @@ export function SiteHeader() {
   return (
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <div className="site-shell header-inner">
-        <a className="brand-link" href="/" aria-label="Bayworld Creatives home">
+        <Link className="brand-link" href="/" aria-label="Bayworld Creatives home">
           <img className="brand-logo brand-logo-white" src="/bayworld-logo-night.png" alt="Bayworld Creatives" />
           <img className="brand-logo brand-logo-green" src="/bayworld-logo-day.png" alt="Bayworld Creatives" />
-        </a>
+        </Link>
         <nav id="site-menu" className={`nav-links${isMenuOpen ? " is-open" : ""}`} aria-label="Primary navigation">
-          <a href="/about" onClick={closeMenu}>About</a><a href="/services" onClick={closeMenu}>Services</a><a href="/work" onClick={closeMenu}>Work</a><a href="/campaigns" onClick={closeMenu}>Campaigns</a><a href="/contact" onClick={closeMenu}>Contact</a>
-          <a className="mobile-menu-cta" href="/contact" onClick={closeMenu}>Start a project <span aria-hidden="true">&rarr;</span></a>
+          <Link href="/about" onClick={closeMenu}>About</Link><Link href="/services" onClick={closeMenu}>Services</Link><Link href="/work" onClick={closeMenu}>Work</Link><Link href="/campaigns" onClick={closeMenu}>Campaigns</Link><Link href="/contact" onClick={closeMenu}>Contact</Link>
+          <Link className="mobile-menu-cta" href="/contact" onClick={closeMenu}>Start a project <span aria-hidden="true">&rarr;</span></Link>
           <button className="mobile-theme-toggle" type="button" onClick={toggleTheme}>{isNight ? "Switch to day mode" : "Switch to night mode"}</button>
         </nav>
         <button className="theme-toggle" type="button" onClick={toggleTheme} aria-pressed={isNight} aria-label={`Switch to ${isNight ? "day" : "night"} mode`}>
@@ -48,7 +51,7 @@ export function SiteHeader() {
         <button className={`menu-toggle${isMenuOpen ? " is-open" : ""}`} type="button" onClick={() => setIsMenuOpen((open) => !open)} aria-controls="site-menu" aria-expanded={isMenuOpen} aria-label={`${isMenuOpen ? "Close" : "Open"} menu`}>
           <span /><span /><span />
         </button>
-        <a className="header-cta" href="/contact"><i aria-hidden="true" /> Let&apos;s talk <span aria-hidden="true">&rarr;</span></a>
+        <Link className="header-cta" href="/contact"><i aria-hidden="true" /> Let&apos;s talk <span aria-hidden="true">&rarr;</span></Link>
       </div>
       <div className="playful-ribbon" aria-hidden="true"><div>Big ideas <b>✦</b> Bold print <b>✦</b> Digital spark <b>✦</b> Branding with personality <b>✦</b> Big ideas <b>✦</b> Bold print <b>✦</b> Digital spark <b>✦</b> Branding with personality <b>✦</b></div></div>
     </header>

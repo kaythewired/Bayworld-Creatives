@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { PageHero } from "../_components/PageHero";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
 import { creativeImages } from "../_components/site-data";
+
+export const metadata: Metadata = {
+  title: "Contact Bayworld Creatives",
+  description: "Contact Bayworld Creatives in Lagos for branding, print production, website design and digital marketing support.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (
