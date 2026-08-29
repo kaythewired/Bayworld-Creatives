@@ -81,7 +81,9 @@ const organizationSchema = {
   description: "Lagos creative agency for branding, design, print production, websites and digital marketing.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "1 Adetola Street, Coker, Aguda",
     addressLocality: "Lagos",
+    postalCode: "100001",
     addressCountry: "NG",
   },
   areaServed: {
@@ -105,6 +107,20 @@ const organizationSchema = {
       availableLanguage: "en",
     },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Creative services",
+    itemListElement: [
+      "Branding & Graphic Design",
+      "Printing & Production",
+      "Website Design & Development",
+      "Social Media Management",
+      "Digital Marketing & SEO",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
