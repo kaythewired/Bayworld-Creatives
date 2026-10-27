@@ -51,7 +51,7 @@ export default function WorkPage() {
             <div className="profile-gallery-grid">
               {companyProfileGallery.map((item, index) => (
                 <figure className={`profile-gallery-card ${item.size}`} key={item.src}>
-                  <img src={item.src} alt={item.alt} />
+                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
                   <figcaption>
                     <span>{String(index + 1).padStart(2, "0")} / {item.category}</span>
                     <strong>{item.title}</strong>

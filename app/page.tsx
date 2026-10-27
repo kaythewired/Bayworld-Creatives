@@ -1,5 +1,6 @@
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
+import { SimpleHome } from "./_components/SimpleHome";
 import { featuredClients, portfolioGallery, process, services } from "./_components/site-data";
 
 const work = [portfolioGallery[8], portfolioGallery[21], portfolioGallery[0], portfolioGallery[10], portfolioGallery[5]];
@@ -18,6 +19,8 @@ function ClientLogo({ client }: { client: (typeof featuredClients)[number] }) {
       <img
         src={client.logo}
         alt={`${client.name} logo`}
+        loading="lazy"
+        decoding="async"
         style={{
           width: Math.round(canvasWidth * scale),
           height: Math.round(canvasHeight * scale),
@@ -30,6 +33,10 @@ function ClientLogo({ client }: { client: (typeof featuredClients)[number] }) {
 }
 
 export default function Home() {
+  return <SimpleHome />;
+}
+
+function LegacyHome() {
   return (
     <>
       <SiteHeader />
@@ -69,7 +76,7 @@ export default function Home() {
           <div className="site-shell">
             <div className="bw-section-heading"><div><p className="bw-eyebrow">Selected work</p><h2>Work that earns<br />a <em>second look.</em></h2></div><a className="bw-text-link" href="/work">View the full gallery <span aria-hidden="true">→</span></a></div>
             <div className="bw-work-grid">
-              {work.map((item, index) => <a className={`bw-work-card bw-work-card-${index + 1}`} href="/work" key={item.title}><img src={item.src} alt={item.alt} /><span>{item.category}</span><strong>{item.title}</strong><i aria-hidden="true">↗</i></a>)}
+              {work.map((item, index) => <a className={`bw-work-card bw-work-card-${index + 1}`} href="/work" key={item.title}><img src={item.src} alt={item.alt} loading="lazy" decoding="async" /><span>{item.category}</span><strong>{item.title}</strong><i aria-hidden="true">↗</i></a>)}
             </div>
           </div>
         </section>
@@ -84,7 +91,7 @@ export default function Home() {
         </section>
 
         <section className="bw-spotlight">
-          <figure><img src={portfolioGallery[21].src} alt={portfolioGallery[21].alt} /></figure>
+          <figure><img src={portfolioGallery[21].src} alt={portfolioGallery[21].alt} loading="lazy" decoding="async" /></figure>
           <div className="site-shell bw-spotlight-copy"><p className="bw-eyebrow">Brand systems in motion</p><h2>Identity should work<br />everywhere <em>you do.</em></h2><p>From a business card in a hand to a branded vehicle on the road, we build connected creative systems that hold their own in the real world.</p><a href="/campaigns">Explore campaigns <span aria-hidden="true">↗</span></a></div>
         </section>
 

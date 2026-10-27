@@ -51,7 +51,7 @@ export function PortfolioGallery({
         <div className="portfolio-gallery-stage">
           {items.map((item, index) => (
             <figure className={`portfolio-gallery-slide${index === activeIndex ? " is-active" : ""}`} key={item.src} aria-hidden={index !== activeIndex}>
-              <img src={item.src} alt={index === activeIndex ? item.alt : ""} />
+              <img src={item.src} alt={index === activeIndex ? item.alt : ""} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
               <figcaption><span>{item.category}</span><strong>{item.title}</strong></figcaption>
             </figure>
           ))}
@@ -67,7 +67,7 @@ export function PortfolioGallery({
           <div className="portfolio-gallery-thumbnails" aria-label="Choose a portfolio project">
             {items.map((item, index) => (
               <button className={index === activeIndex ? "is-active" : ""} type="button" key={item.src} onClick={() => moveTo(index)} aria-label={`Show ${item.title}`} aria-current={index === activeIndex ? "true" : undefined}>
-                <img src={item.src} alt="" loading="lazy" />
+                <img src={item.src} alt="" loading="lazy" decoding="async" />
               </button>
             ))}
           </div>

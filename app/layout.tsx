@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { PlayfulInteractions } from "./_components/PlayfulInteractions";
-import { ScrollReveal } from "./_components/ScrollReveal";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -128,8 +126,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <ScrollReveal />
-        <PlayfulInteractions />
         {children}
       </body>
     </html>

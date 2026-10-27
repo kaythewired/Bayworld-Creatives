@@ -58,10 +58,10 @@ export default function CampaignsPage() {
         <div className="site-shell">
           <div className="nurvfit-lab-heading"><div><p className="reference-eyebrow">Designed as a whole</p><h2>Not just gear.<br /><em>A world in motion.</em></h2></div><p>The campaign treats every surface as an opportunity to perform. Deep red gives it energy. Black gives it force. White brings clarity to the system.</p></div>
           <div className="nurvfit-lab-grid">
-            <figure className="nurvfit-lab-a"><img src="/gallery/nurvfit-retail-experience.png" alt="NURVFIT premium sportswear retail environment" /><figcaption>Retail energy</figcaption></figure>
-            <figure className="nurvfit-lab-b"><img src="/gallery/nurveit-brand-red.png" alt="NURVFIT red brand pattern" /><figcaption>Signature pattern</figcaption></figure>
-            <figure className="nurvfit-lab-c"><img src="/gallery/nurvfit-street-style.png" alt="NURVFIT athletes in black, red and white activewear" /><figcaption>Performance, together</figcaption></figure>
-            <figure className="nurvfit-lab-d"><img src="/gallery/nurvfit-own-the-court.png" alt="NURVFIT basketball athlete in the Own the Court campaign" /><figcaption>Own the court</figcaption></figure>
+            <figure className="nurvfit-lab-a"><img src="/gallery/nurvfit-retail-experience.png" alt="NURVFIT premium sportswear retail environment" loading="lazy" decoding="async" /><figcaption>Retail energy</figcaption></figure>
+            <figure className="nurvfit-lab-b"><img src="/gallery/nurveit-brand-red.png" alt="NURVFIT red brand pattern" loading="lazy" decoding="async" /><figcaption>Signature pattern</figcaption></figure>
+            <figure className="nurvfit-lab-c"><img src="/gallery/nurvfit-street-style.png" alt="NURVFIT athletes in black, red and white activewear" loading="lazy" decoding="async" /><figcaption>Performance, together</figcaption></figure>
+            <figure className="nurvfit-lab-d"><img src="/gallery/nurvfit-own-the-court.png" alt="NURVFIT basketball athlete in the Own the Court campaign" loading="lazy" decoding="async" /><figcaption>Own the court</figcaption></figure>
           </div>
         </div>
       </section>
