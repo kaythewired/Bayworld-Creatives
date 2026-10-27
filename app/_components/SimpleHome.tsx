@@ -1,9 +1,16 @@
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
+import { HeroShowcase } from "./HeroShowcase";
 import { featuredClients, portfolioGallery, process, services } from "./site-data";
 
 const featuredWork = [portfolioGallery[21], portfolioGallery[8], portfolioGallery[0], portfolioGallery[5]];
 const coreServices = [services[0], services[1], services[2], services[4]];
+const heroSlides = [
+  { ...portfolioGallery[21], message: "A mobile brand presence built to work clearly on the road." },
+  { ...portfolioGallery[8], message: "Campaign branding that turns an everyday touchpoint into a memorable moment." },
+  { ...portfolioGallery[0], message: "Clear promotional design made for a fast-moving business." },
+  { ...portfolioGallery[5], message: "Thoughtful print communication, structured to make information easy to use." },
+];
 
 export function SimpleHome() {
   return (
@@ -21,10 +28,7 @@ export function SimpleHome() {
                 <a className="simple-button simple-button-secondary" href="/work">View our work</a>
               </div>
             </div>
-            <figure className="simple-hero-image">
-              <img src={portfolioGallery[21].src} alt={portfolioGallery[21].alt} />
-              <figcaption><span>Featured project</span><strong>{portfolioGallery[21].title}</strong></figcaption>
-            </figure>
+            <HeroShowcase slides={heroSlides} />
           </div>
         </section>
 
