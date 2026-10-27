@@ -5,6 +5,33 @@ import { featuredClients, portfolioGallery, process, services } from "./site-dat
 
 const featuredWork = [portfolioGallery[21], portfolioGallery[8], portfolioGallery[0], portfolioGallery[5]];
 const coreServices = [services[0], services[1], services[2], services[4]];
+const simpleClientLogoWidth = 170;
+const simpleClientLogoHeight = 66;
+
+function SimpleClientLogo({ client }: { client: (typeof featuredClients)[number] }) {
+  const { canvasWidth, canvasHeight, left, top, width, height } = client.crop;
+  const scale = Math.min(simpleClientLogoWidth / width, simpleClientLogoHeight / height);
+  const visibleWidth = width * scale;
+  const visibleHeight = height * scale;
+
+  return (
+    <span className="simple-client-logo" style={{ width: simpleClientLogoWidth, height: simpleClientLogoHeight }}>
+      <img
+        src={client.logo}
+        alt={`${client.name} logo`}
+        loading="lazy"
+        decoding="async"
+        style={{
+          width: Math.round(canvasWidth * scale),
+          height: Math.round(canvasHeight * scale),
+          left: Math.round((simpleClientLogoWidth - visibleWidth) / 2 - left * scale),
+          top: Math.round((simpleClientLogoHeight - visibleHeight) / 2 - top * scale),
+        }}
+      />
+    </span>
+  );
+}
+
 const heroSlides = [
   { ...portfolioGallery[21], headline: "Take your brand further.", lead: "Vehicle branding that turns every journey into a clear, moving advert.", message: "A mobile brand presence built to work clearly on the road." },
   { ...portfolioGallery[8], headline: "Make every touchpoint count.", lead: "Campaign design that helps brands show up with confidence in everyday moments.", message: "Campaign branding that turns an everyday touchpoint into a memorable moment." },
@@ -80,7 +107,11 @@ export function SimpleHome() {
         <section className="simple-clients">
           <div className="site-shell">
             <p className="simple-label">Selected clients</p>
-            <div>{featuredClients.slice(0, 8).map((client) => <span key={client.name}>{client.name}</span>)}</div>
+            <div className="simple-client-grid">
+              {featuredClients.slice(0, 8).map((client) => (
+                <figure key={client.name}><SimpleClientLogo client={client} /></figure>
+              ))}
+            </div>
           </div>
         </section>
 
