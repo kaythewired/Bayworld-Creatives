@@ -237,8 +237,9 @@ h1 em, h2 em { color: var(--forest-bright); font-weight: 700; }
 .contact-card { padding: 42px; background: var(--black); color: var(--paper); box-shadow: 13px 14px 0 var(--forest-bright); }
 .contact-card .footer-label { margin-bottom: 16px; }
 .contact-phone { display: block; margin-bottom: 11px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(30px, 3vw, 42px); letter-spacing: -.055em; }
-.contact-phone:hover, .contact-web:hover { color: var(--forest-soft); }
+.contact-phone:hover, .contact-email:hover, .contact-web:hover { color: var(--forest-soft); }
 .contact-rule { height: 1px; margin: 32px 0; background: var(--line-light); }
+.contact-email { display: block; overflow-wrap: anywhere; color: var(--paper); font-family: Georgia, "Times New Roman", serif; font-size: clamp(23px, 2.3vw, 32px); letter-spacing: -.04em; }
 .contact-web { display: flex; justify-content: space-between; gap: 20px; color: var(--paper); font-size: 13px; font-weight: 700; }
 .contact-web span { color: var(--forest-soft); font-size: 18px; }
 .contact-details { padding: 51px 0; background: var(--forest-soft); }

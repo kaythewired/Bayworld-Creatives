@@ -89,10 +89,12 @@ const organizationSchema = {
     name: "Nigeria",
   },
   telephone: "+2349064428166",
+  email: "info@bayworldcreatives.com",
   contactPoint: [
     {
       "@type": "ContactPoint",
       telephone: "+2349064428166",
+      email: "info@bayworldcreatives.com",
       contactType: "customer service",
       areaServed: "NG",
       availableLanguage: "en",
