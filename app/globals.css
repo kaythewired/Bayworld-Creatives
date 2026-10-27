@@ -965,8 +965,9 @@ body::before, body::after, .playful-interactions { display: none !important; }
 .simple-kicker, .simple-label { margin: 0; color: var(--simple-green); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .simple-hero { padding: 74px 0 92px; }
 .simple-hero-grid { display: grid; grid-template-columns: minmax(0,.83fr) minmax(480px,1.17fr); gap: clamp(55px,8vw,130px); align-items: center; }
+.simple-hero-copy, .simple-showcase { min-width: 0; }
 .simple-hero-copy { animation: simple-copy-enter 420ms ease both; }
-.simple-hero-copy h1 { max-width: 680px; margin: 25px 0 31px; font-size: clamp(68px,8vw,128px); line-height: .86; }
+.simple-hero-copy h1 { max-width: 100%; margin: 25px 0 31px; font-size: clamp(58px,5vw,84px); line-height: .92; text-wrap: balance; }
 .simple-lead { max-width: 540px; margin: 0; color: rgba(23,26,24,.7); font-size: 18px; line-height: 1.65; }
 .simple-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .simple-button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; padding: 0 23px; border: 1px solid var(--simple-green); border-radius: 999px; font-size: 14px; font-weight: 750; }
@@ -1089,7 +1090,7 @@ body::before, body::after, .playful-interactions { display: none !important; }
   .mobile-menu-cta { border-color: var(--simple-green) !important; color: var(--simple-green) !important; }
   .simple-hero { padding: 44px 0 68px; }
   .simple-hero-grid { gap: 48px; }
-  .simple-hero-copy h1 { margin-top: 20px; font-size: clamp(58px,18vw,86px); }
+  .simple-hero-copy h1 { margin-top: 20px; font-size: clamp(50px,14.5vw,72px); }
   .simple-lead { font-size: 16px; }
   .simple-hero-image img { aspect-ratio: 1.1; }
   .simple-showcase-stage { aspect-ratio: 1.1; }
