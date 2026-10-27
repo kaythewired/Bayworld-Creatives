@@ -965,6 +965,7 @@ body::before, body::after, .playful-interactions { display: none !important; }
 .simple-kicker, .simple-label { margin: 0; color: var(--simple-green); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .simple-hero { padding: 74px 0 92px; }
 .simple-hero-grid { display: grid; grid-template-columns: minmax(0,.83fr) minmax(480px,1.17fr); gap: clamp(55px,8vw,130px); align-items: center; }
+.simple-hero-copy { animation: simple-copy-enter 420ms ease both; }
 .simple-hero-copy h1 { max-width: 680px; margin: 25px 0 31px; font-size: clamp(68px,8vw,128px); line-height: .86; }
 .simple-lead { max-width: 540px; margin: 0; color: rgba(23,26,24,.7); font-size: 18px; line-height: 1.65; }
 .simple-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
@@ -973,6 +974,7 @@ body::before, body::after, .playful-interactions { display: none !important; }
 .simple-button-primary:hover { background: #06472b; }
 .simple-button-secondary { color: var(--simple-green); }
 .simple-button-secondary:hover { background: rgba(7,91,54,.07); }
+@keyframes simple-copy-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 .simple-hero-image { margin: 0; }
 .simple-hero-image img { width: 100%; aspect-ratio: 1.08; object-fit: cover; }
 .simple-hero-image figcaption { display: flex; justify-content: space-between; gap: 20px; padding-top: 13px; color: rgba(23,26,24,.58); font-size: 12px; }

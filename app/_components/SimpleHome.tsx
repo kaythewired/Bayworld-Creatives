@@ -6,10 +6,10 @@ import { featuredClients, portfolioGallery, process, services } from "./site-dat
 const featuredWork = [portfolioGallery[21], portfolioGallery[8], portfolioGallery[0], portfolioGallery[5]];
 const coreServices = [services[0], services[1], services[2], services[4]];
 const heroSlides = [
-  { ...portfolioGallery[21], message: "A mobile brand presence built to work clearly on the road." },
-  { ...portfolioGallery[8], message: "Campaign branding that turns an everyday touchpoint into a memorable moment." },
-  { ...portfolioGallery[0], message: "Clear promotional design made for a fast-moving business." },
-  { ...portfolioGallery[5], message: "Thoughtful print communication, structured to make information easy to use." },
+  { ...portfolioGallery[21], headline: "Take your brand further.", lead: "Vehicle branding that turns every journey into a clear, moving advert.", message: "A mobile brand presence built to work clearly on the road." },
+  { ...portfolioGallery[8], headline: "Make every touchpoint count.", lead: "Campaign design that helps brands show up with confidence in everyday moments.", message: "Campaign branding that turns an everyday touchpoint into a memorable moment." },
+  { ...portfolioGallery[0], headline: "Campaigns built to move.", lead: "Clear promotional design made for fast-moving businesses and audiences.", message: "Clear promotional design made for a fast-moving business." },
+  { ...portfolioGallery[5], headline: "Complex ideas, made clear.", lead: "Thoughtful print design that makes important information easy to understand and use.", message: "Thoughtful print communication, structured to make information easy to use." },
 ];
 
 export function SimpleHome() {
@@ -19,15 +19,6 @@ export function SimpleHome() {
       <main id="top" className="simple-home">
         <section className="simple-hero">
           <div className="site-shell simple-hero-grid">
-            <div className="simple-hero-copy">
-              <p className="simple-kicker">Creative studio · Lagos, Nigeria</p>
-              <h1>Clear ideas.<br />Strong brands.</h1>
-              <p className="simple-lead">We bring branding, print and digital design together to help businesses look professional and communicate with confidence.</p>
-              <div className="simple-actions">
-                <a className="simple-button simple-button-primary" href="/contact">Start a project</a>
-                <a className="simple-button simple-button-secondary" href="/work">View our work</a>
-              </div>
-            </div>
             <HeroShowcase slides={heroSlides} />
           </div>
         </section>
