@@ -77,13 +77,6 @@ const organizationSchema = {
   logo: "https://www.bayworldcreatives.com/bayworld-transparent-favicon.png",
   image: "https://www.bayworldcreatives.com/og-bayworld-2026.png",
   description: "Lagos creative agency for branding, design, print production, websites and digital marketing.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "1 Adetola Street, Coker, Aguda",
-    addressLocality: "Lagos",
-    postalCode: "100001",
-    addressCountry: "NG",
-  },
   areaServed: {
     "@type": "Country",
     name: "Nigeria",
