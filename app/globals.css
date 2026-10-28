@@ -950,16 +950,23 @@ body { overflow-x: hidden; background: var(--simple-cream); color: var(--simple-
 body::before, body::after, .playful-interactions { display: none !important; }
 
 .site-shell { width: min(1240px, calc(100% - 64px)); }
-.site-header, .site-header.is-scrolled { position: sticky; border-bottom: 1px solid var(--simple-line); background: rgba(245,244,239,.96); color: var(--simple-ink); backdrop-filter: blur(14px); }
+.site-header { position: sticky; border-bottom: 1px solid var(--simple-line); background: rgba(245,244,239,.96); color: var(--simple-ink); backdrop-filter: blur(14px); transition: background-color .28s ease, border-color .28s ease, color .28s ease, box-shadow .28s ease; }
+.site-header.is-scrolled { border-bottom-color: rgba(255,255,255,.16); background: rgba(7,91,54,.97); color: #fff; box-shadow: 0 12px 30px rgba(4,45,27,.2); }
 .header-inner { height: 88px; }
-.brand-logo, .site-header.is-scrolled .brand-logo { display: block; width: 230px; height: 60px; filter: none; }
+.brand-logo { display: block; width: 230px; height: 60px; filter: none; transition: filter .28s ease; }
+.site-header.is-scrolled .brand-logo { display: block; width: 230px; height: 60px; filter: brightness(0) invert(1); }
 .nav-links { gap: 28px; }
-.nav-links a, .site-header.is-scrolled .nav-links a { color: rgba(23,26,24,.68); font-size: 13px; font-weight: 650; }
+.nav-links a { color: rgba(23,26,24,.68); font-size: 13px; font-weight: 650; }
+.site-header.is-scrolled .nav-links a { color: rgba(255,255,255,.82); }
 .nav-links a:hover, .nav-links a:focus-visible, .nav-links a.is-current { color: var(--simple-green); transform: none; }
 .nav-links a::after { bottom: 0; background: var(--simple-green); }
-.header-cta, .site-header.is-scrolled .header-cta { min-height: 44px; padding: 0 18px; border: 1px solid var(--simple-green); border-radius: 999px; background: var(--simple-green); color: #fff; }
+.site-header.is-scrolled .nav-links a:hover, .site-header.is-scrolled .nav-links a:focus-visible, .site-header.is-scrolled .nav-links a.is-current { color: #fff; }
+.site-header.is-scrolled .nav-links a::after { background: #fff; }
+.header-cta { min-height: 44px; padding: 0 18px; border: 1px solid var(--simple-green); border-radius: 999px; background: var(--simple-green); color: #fff; }
+.site-header.is-scrolled .header-cta { border-color: #fff; background: #fff; color: var(--simple-green); }
 .header-cta i { display: none; }
 .header-cta:hover { background: #06472b; color: #fff; }
+.site-header.is-scrolled .header-cta:hover { background: #e8f1eb; color: #06472b; }
 
 .simple-home { background: var(--simple-cream); }
 .simple-home h1, .simple-home h2, .simple-home h3 { color: var(--simple-ink); font-family: Arial, Helvetica, sans-serif; letter-spacing: -.055em; }
@@ -1108,11 +1115,16 @@ body::before, body::after, .playful-interactions { display: none !important; }
   .header-inner { height: 74px; gap: 12px; }
   .brand-logo, .site-header.is-scrolled .brand-logo { width: 154px; height: 48px; }
   .header-cta { margin-left: auto; min-height: 38px; padding: 0 13px; font-size: 11px; }
-  .menu-toggle, .site-header.is-scrolled .menu-toggle { display: grid; order: 3; width: 38px; height: 38px; border-color: rgba(23,26,24,.25); }
-  .menu-toggle span, .site-header.is-scrolled .menu-toggle span { background: var(--simple-ink); }
-  .nav-links, .site-header.is-scrolled .nav-links { top: 74px; padding: 8px 16px 20px; background: var(--simple-cream); }
-  .nav-links a, .site-header.is-scrolled .nav-links a { color: var(--simple-ink); }
+  .menu-toggle { display: grid; order: 3; width: 38px; height: 38px; border-color: rgba(23,26,24,.25); }
+  .menu-toggle span { background: var(--simple-ink); }
+  .nav-links { top: 74px; padding: 8px 16px 20px; background: var(--simple-cream); }
+  .nav-links a { color: var(--simple-ink); }
+  .site-header.is-scrolled .menu-toggle { display: grid; border-color: rgba(255,255,255,.55); }
+  .site-header.is-scrolled .menu-toggle span { background: #fff; }
+  .site-header.is-scrolled .nav-links { top: 74px; padding: 8px 16px 20px; background: var(--simple-green); }
+  .site-header.is-scrolled .nav-links a { color: #fff; }
   .mobile-menu-cta { border-color: var(--simple-green) !important; color: var(--simple-green) !important; }
+  .site-header.is-scrolled .mobile-menu-cta { border-color: #fff !important; color: #fff !important; }
   .simple-hero { padding: 0; }
   .simple-hero-grid { gap: 48px; }
   .simple-showcase-full { min-height: calc(100svh - 74px); }
