@@ -1005,7 +1005,13 @@ body::before, body::after, .playful-interactions { display: none !important; }
 .simple-section-head h2, .simple-process-grid > div > h2 { max-width: 760px; margin: 15px 0 0; font-size: clamp(43px,5.4vw,80px); line-height: .96; }
 .simple-section-head > a { flex: 0 0 auto; padding-bottom: 5px; border-bottom: 1px solid currentColor; color: var(--simple-green); font-size: 14px; font-weight: 750; }
 .simple-service-list { border-top: 1px solid var(--simple-line); }
-.simple-service-list article { display: grid; grid-template-columns: 70px minmax(250px,.85fr) 1fr; gap: 30px; align-items: start; padding: 30px 0; border-bottom: 1px solid var(--simple-line); }
+.simple-service-list article { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 70px minmax(250px,.85fr) 1fr; gap: 30px; align-items: start; padding: 30px 0; border-bottom: 1px solid var(--simple-line); }
+.simple-service-list article::before { position: absolute; z-index: 0; inset: 0 0 0 48%; background-position: center; background-size: cover; opacity: .11; filter: saturate(.35); -webkit-mask-image: linear-gradient(90deg, transparent, #000 35%); mask-image: linear-gradient(90deg, transparent, #000 35%); content: ""; transition: opacity .3s ease; }
+.simple-service-list article:nth-child(1)::before { background-image: url("/gallery/admaks-flyers.webp"); }
+.simple-service-list article:nth-child(3)::before { background-image: url("/gallery/heroes-of-indrive.webp"); }
+.simple-service-list article:nth-child(4)::before { background-image: url("/gallery/ceo-smart-flyers.webp"); }
+.simple-service-list article:hover::before { opacity: .17; }
+.simple-service-list article > * { position: relative; z-index: 1; }
 .simple-service-list span { color: var(--simple-green); font-size: 12px; font-weight: 800; }
 .simple-service-list h3 { margin: -5px 0 0; font-size: clamp(27px,3vw,43px); line-height: 1; }
 .simple-service-list p { max-width: 520px; margin: 0; color: rgba(23,26,24,.64); font-size: 15px; line-height: 1.65; }
@@ -1020,7 +1026,11 @@ body::before, body::after, .playful-interactions { display: none !important; }
 .simple-process { background: #e8efe9; }
 .simple-process-grid { display: grid; grid-template-columns: .78fr 1fr; gap: clamp(60px,9vw,150px); }
 .simple-process-list { border-top: 1px solid rgba(7,91,54,.22); }
-.simple-process-list article { display: grid; grid-template-columns: 55px 1fr; gap: 25px; padding: 27px 0; border-bottom: 1px solid rgba(7,91,54,.22); }
+.simple-process-list article { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 55px 1fr; gap: 25px; padding: 27px 18px 27px 0; border-bottom: 1px solid rgba(7,91,54,.22); }
+.simple-process-list article::before { position: absolute; z-index: 0; inset: 0 0 0 46%; background-position: center; background-size: cover; opacity: .08; filter: grayscale(.35) saturate(.45); -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%); mask-image: linear-gradient(90deg, transparent, #000 38%); content: ""; }
+.simple-process-list article:nth-child(1)::before { background-image: url("/gallery/purna-rollup.webp"); }
+.simple-process-list article:nth-child(3)::before { background-image: url("/gallery/koka-van-rear-side.webp"); }
+.simple-process-list article > * { position: relative; z-index: 1; }
 .simple-process-list span { color: var(--simple-green); font-size: 12px; font-weight: 800; }
 .simple-process-list h3 { margin: -5px 0 8px; font-size: 31px; }
 .simple-process-list p { margin: 0; color: rgba(23,26,24,.65); font-size: 15px; line-height: 1.6; }
@@ -1103,6 +1113,7 @@ body::before, body::after, .playful-interactions { display: none !important; }
   .simple-section-head { align-items: flex-start; flex-direction: column; margin-bottom: 35px; }
   .simple-section-head h2, .simple-process-grid > div > h2 { font-size: 47px; }
   .simple-service-list article { grid-template-columns: 36px 1fr; gap: 14px; padding: 24px 0; }
+  .simple-service-list article::before { left: 42%; opacity: .08; }
   .simple-service-list p { grid-column: 2; }
   .simple-service-list h3 { font-size: 30px; }
   .simple-work-grid { grid-template-columns: 1fr; gap: 34px; }
