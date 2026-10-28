@@ -45,9 +45,7 @@ export function SimpleHome() {
       <SiteHeader />
       <main id="top" className="simple-home">
         <section className="simple-hero">
-          <div className="site-shell simple-hero-grid">
-            <HeroShowcase slides={heroSlides} />
-          </div>
+          <HeroShowcase slides={heroSlides} />
         </section>
 
         <section className="simple-statement">

@@ -26,30 +26,30 @@ export function HeroShowcase({ slides }: { slides: HeroSlide[] }) {
   const activeSlide = slides[activeIndex];
 
   return (
-    <>
-      <div className="simple-hero-copy" key={activeSlide.src}>
-        <p className="simple-kicker">Creative studio · Lagos, Nigeria</p>
-        <h1>{activeSlide.headline}</h1>
-        <p className="simple-lead">{activeSlide.lead}</p>
-        <div className="simple-actions">
-          <a className="simple-button simple-button-primary" href="/contact">Start a project</a>
-          <a className="simple-button simple-button-secondary" href="/work">View our work</a>
-        </div>
+    <div className="simple-showcase simple-showcase-full" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+      <div className="simple-showcase-stage">
+        {slides.map((slide, index) => (
+          <img
+            className={index === activeIndex ? "is-active" : ""}
+            src={slide.src}
+            alt={index === activeIndex ? slide.alt : ""}
+            aria-hidden={index !== activeIndex}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+            key={slide.src}
+          />
+        ))}
       </div>
-
-      <div className="simple-showcase" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-        <div className="simple-showcase-stage">
-          {slides.map((slide, index) => (
-            <img
-              className={index === activeIndex ? "is-active" : ""}
-              src={slide.src}
-              alt={index === activeIndex ? slide.alt : ""}
-              aria-hidden={index !== activeIndex}
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding="async"
-              key={slide.src}
-            />
-          ))}
+      <div className="simple-showcase-shade" aria-hidden="true" />
+      <div className="site-shell simple-showcase-content">
+        <div className="simple-hero-copy" key={activeSlide.src}>
+          <p className="simple-kicker">Creative studio · Lagos, Nigeria</p>
+          <h1>{activeSlide.headline}</h1>
+          <p className="simple-lead">{activeSlide.lead}</p>
+          <div className="simple-actions">
+            <a className="simple-button simple-button-primary" href="/contact">Start a project</a>
+            <a className="simple-button simple-button-secondary" href="/work">View our work</a>
+          </div>
         </div>
         <div className="simple-showcase-copy">
           <div className="simple-showcase-caption">
@@ -74,6 +74,6 @@ export function HeroShowcase({ slides }: { slides: HeroSlide[] }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
