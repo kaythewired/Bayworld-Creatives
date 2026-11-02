@@ -954,7 +954,7 @@ body::before, body::after, .playful-interactions { display: none !important; }
 .site-header.is-scrolled { border-bottom-color: rgba(255,255,255,.16); background: rgba(7,91,54,.97); color: #fff; box-shadow: 0 12px 30px rgba(4,45,27,.2); }
 .header-inner { height: 88px; }
 .brand-logo { display: block; width: 230px; height: 60px; filter: none; transition: filter .28s ease; }
-.site-header.is-scrolled .brand-logo { display: block; width: 230px; height: 60px; filter: brightness(0) invert(1); }
+.site-header.is-scrolled .brand-logo { display: block; width: 230px; height: 60px; filter: none; }
 .nav-links { gap: 28px; }
 .nav-links a { color: rgba(23,26,24,.68); font-size: 13px; font-weight: 650; }
 .site-header.is-scrolled .nav-links a { color: rgba(255,255,255,.82); }

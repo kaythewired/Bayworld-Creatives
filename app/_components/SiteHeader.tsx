@@ -43,7 +43,11 @@ export function SiteHeader() {
       <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
         <div className="site-shell header-inner">
         <Link className="brand-link" href="/" aria-label="Bayworld Creatives home">
-          <img className="brand-logo" src="/bayworld-logo-day.png" alt="Bayworld Creatives" />
+          <img
+            className="brand-logo"
+            src={isScrolled ? "/bayworld-logo-night.png" : "/bayworld-logo-day.png"}
+            alt="Bayworld Creatives"
+          />
         </Link>
         <nav id="site-menu" className={`nav-links${isMenuOpen ? " is-open" : ""}`} aria-label="Primary navigation">
           {navigation.map((item) => (
